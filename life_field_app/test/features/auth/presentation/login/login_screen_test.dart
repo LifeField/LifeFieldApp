@@ -51,10 +51,53 @@ void main() {
     expect(fakeRepository.loginCalls.single.$2, 'supersecret');
     expect(memoryStorage.lastSaved?.accessToken, 'token');
   });
+
+  testWidgets('opens registration dialog and registers user', (tester) async {
+    final fakeRepository = _FakeAuthRepository();
+    final memoryStorage = _MemoryTokenStorage();
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          authNotifierProvider.overrideWith(
+            (ref) => AuthNotifier(
+              repository: fakeRepository,
+              tokenStorage: memoryStorage,
+            ),
+          ),
+        ],
+        child: const MaterialApp(
+          localizationsDelegates: [
+            AppLocalizationsDelegate(),
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: LoginScreen(),
+        ),
+      ),
+    );
+
+    await tester.tap(find.text('Non hai un account? Clicca qui e iscriviti'));
+    await tester.pumpAndSettle();
+
+    await tester.enterText(find.byKey(const Key('register_email')), 'new@example.com');
+    await tester.enterText(find.byKey(const Key('register_password')), 'password123');
+    await tester.enterText(find.byKey(const Key('register_confirm_password')), 'password123');
+    await tester.tap(find.byKey(const Key('register_submit')));
+    await tester.pumpAndSettle();
+
+    expect(fakeRepository.registerCalls, hasLength(1));
+    expect(fakeRepository.registerCalls.single.$1, 'new@example.com');
+    expect(fakeRepository.registerCalls.single.$2, 'password123');
+    expect(memoryStorage.lastSaved?.accessToken, 'token');
+  });
 }
 
 class _FakeAuthRepository implements AuthRepository {
   final List<(String, String)> loginCalls = [];
+  final List<(String, String)> registerCalls = [];
 
   @override
   Future<AuthTokens> login({required String email, required String password}) async {
@@ -69,6 +112,7 @@ class _FakeAuthRepository implements AuthRepository {
 
   @override
   Future<AuthTokens> register({required String email, required String password}) async {
+    registerCalls.add((email, password));
     return const AuthTokens(accessToken: 'token', refreshToken: 'refresh');
   }
 
