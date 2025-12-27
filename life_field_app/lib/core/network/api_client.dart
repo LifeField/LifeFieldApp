@@ -25,8 +25,8 @@ final dioProvider = Provider<Dio>((ref) {
     LogInterceptor(
       requestHeader: false,
       responseHeader: false,
-      requestBody: false,
-      responseBody: false,
+      requestBody: true,
+      responseBody: true,
       logPrint: logger.i,
     ),
   );

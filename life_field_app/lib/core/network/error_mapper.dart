@@ -37,6 +37,15 @@ String _extractMessage(DioException error) {
   if (data is Map<String, dynamic> && data['message'] is String) {
     return data['message'] as String;
   }
+  if (data is Map<String, dynamic> && data['error'] is String) {
+    return data['error'] as String;
+  }
+  if (data is String && data.isNotEmpty) {
+    return data;
+  }
+  if (error.response?.statusMessage != null && error.response!.statusMessage!.isNotEmpty) {
+    return error.response!.statusMessage!;
+  }
   if (error.message != null) {
     return error.message!;
   }

@@ -45,7 +45,7 @@ void main() {
     await tester.enterText(find.byKey(const Key('login_password')), 'supersecret');
     await tester.tap(find.byKey(const Key('login_button')));
     await tester.pump();
-
+ 
     expect(fakeRepository.loginCalls, hasLength(1));
     expect(fakeRepository.loginCalls.single.$1, 'user@example.com');
     expect(fakeRepository.loginCalls.single.$2, 'supersecret');

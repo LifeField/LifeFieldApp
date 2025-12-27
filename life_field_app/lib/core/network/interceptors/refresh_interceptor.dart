@@ -36,7 +36,8 @@ class RefreshInterceptor extends Interceptor {
     if (err.response?.statusCode == 401 &&
         !_isRefreshing &&
         !_isRefreshCall(err.requestOptions) &&
-        refreshToken != null) {
+        refreshToken != null &&
+        refreshToken.isNotEmpty) {
       _isRefreshing = true;
       final authNotifier = _read(authNotifierProvider.notifier);
       try {

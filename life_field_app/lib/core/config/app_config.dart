@@ -18,7 +18,8 @@ class AppConfig {
     return const AppConfig(
       baseUrl: String.fromEnvironment(
         'BASE_URL',
-        defaultValue: 'https://api.example.com',
+        //defaultValue: 'https://api.example.com',
+        defaultValue: 'http://172.23.7.58:8080'
       ),
       flavor: flavor,
       sentryDsn: String.fromEnvironment('SENTRY_DSN', defaultValue: ''),
