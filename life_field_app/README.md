@@ -2,6 +2,10 @@
 
 Flutter app for the LifeField fitness/nutrition marketplace with role-based experiences.
 
+## Prerequisites
+
+-After cloning the repo run: flutter pub get
+
 ## Flavors & env
 - Flavors: `dev`, `staging`, `prod` with `--dart-define` (`BASE_URL`, `FLAVOR`, `SENTRY_DSN`).
 - Android: productFlavors already configured; example run `flutter run --flavor dev --dart-define=FLAVOR=dev --dart-define=BASE_URL=https://api.dev.example.com --dart-define=SENTRY_DSN=`.
