@@ -7,6 +7,7 @@ import '../../features/profile/presentation/settings_screen.dart';
 import '../../features/shared/presentation/admin_home_screen.dart';
 import '../../features/shared/presentation/client_home_screen.dart';
 import '../../features/shared/presentation/meal_detail_screen.dart';
+import '../../features/shared/presentation/workout_screen.dart';
 import '../../features/shared/presentation/pro_home_screen.dart';
 import 'go_router_refresh_stream.dart';
 import 'role_redirect.dart';
@@ -58,6 +59,11 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: RoutePaths.settings,
         builder: (context, state) => const SettingsScreen(),
+      ),
+      GoRoute(
+        name: RoutePaths.workoutName,
+        path: RoutePaths.workout,
+        builder: (context, state) => const WorkoutScreen(),
       ),
       GoRoute(
         name: RoutePaths.mealDetailName,
