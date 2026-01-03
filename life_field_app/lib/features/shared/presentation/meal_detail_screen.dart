@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../app/localization/app_localizations.dart';
+import '../domain/entities/meal_models.dart';
 
 class MealDetailScreen extends StatefulWidget {
   const MealDetailScreen({
@@ -237,13 +238,6 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
       ),
     );
   }
-}
-
-class MealFood {
-  const MealFood({required this.name, required this.kcal});
-
-  final String name;
-  final double kcal;
 }
 
 class MealDetailArgs {
