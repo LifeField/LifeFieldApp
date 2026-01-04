@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../data/datasources/workout_local_data_source.dart';
+import '../data/datasources/workout_plan_local_data_source.dart';
 import '../domain/entities/workout_models.dart';
+import 'workout_plan_detail_screen.dart';
+import '../../../app/router/route_paths.dart';
 
 class WorkoutScreen extends StatefulWidget {
   const WorkoutScreen({super.key});
@@ -11,13 +14,14 @@ class WorkoutScreen extends StatefulWidget {
 }
 
 class _WorkoutScreenState extends State<WorkoutScreen> {
-  final WorkoutLocalDataSource _dataSource = WorkoutLocalDataSource.instance;
-  final List<WorkoutEntry> _workouts = [];
+  final WorkoutPlanLocalDataSource _dataSource =
+      WorkoutPlanLocalDataSource.instance;
+  final List<WorkoutPlan> _plans = [];
 
   @override
   void initState() {
     super.initState();
-    _loadWorkouts();
+    _loadPlans();
   }
 
   @override
@@ -30,27 +34,61 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: ListView.separated(
-            itemCount: _workouts.length + 1,
+            itemCount: _plans.length + 1,
             separatorBuilder: (_, __) => const SizedBox(height: 12),
             itemBuilder: (context, index) {
-              if (index == _workouts.length) {
-                return _AddWorkoutCard(onTap: _showAddWorkoutDialog);
+              if (index == _plans.length) {
+                return _AddPlanCard(onTap: _showAddPlanDialog);
               }
-              final workout = _workouts[index];
-              return Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: ListTile(
-                  leading: const Icon(Icons.fitness_center_outlined),
-                  title: Text(workout.name),
-                  subtitle:
-                      workout.details.isNotEmpty ? Text(workout.details) : null,
-                  trailing: const Icon(Icons.chevron_right_rounded),
-                  onLongPress: () => _removeWorkout(workout.id),
-                  onTap: () {
-                    // TODO: dettaglio allenamento locale
-                  },
+              final plan = _plans[index];
+              return Dismissible(
+                key: ValueKey('plan-${plan.id}'),
+                background: _buildCurrentBackground(context),
+                secondaryBackground: _buildDeleteBackground(context),
+                confirmDismiss: (direction) async {
+                  if (direction == DismissDirection.startToEnd) {
+                    await _dataSource.setCurrentPlan(plan.id);
+                    await _loadPlans();
+                    return false;
+                  }
+                  return await _confirmDelete(context, plan);
+                },
+                onDismissed: (direction) async {
+                  if (direction == DismissDirection.endToStart) {
+                    await _removePlan(plan.id);
+                  }
+                },
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: ListTile(
+                    leading: Stack(
+                      alignment: Alignment.bottomRight,
+                      children: [
+                        const Icon(Icons.folder_special_outlined),
+                        if (plan.isCurrent)
+                          Container(
+                            width: 18,
+                            height: 18,
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).colorScheme.primary,
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              Icons.check,
+                              size: 12,
+                              color: Colors.white,
+                            ),
+                          ),
+                      ],
+                    ),
+                    title: Text(plan.name),
+                    subtitle:
+                        plan.details.isNotEmpty ? Text(plan.details) : null,
+                    trailing: const Icon(Icons.chevron_right_rounded),
+                    onTap: () => _openPlan(plan),
+                  ),
                 ),
               );
             },
@@ -60,16 +98,16 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
     );
   }
 
-  Future<void> _loadWorkouts() async {
-    final items = await _dataSource.fetchWorkouts();
+  Future<void> _loadPlans() async {
+    final items = await _dataSource.fetchPlans();
     setState(() {
-      _workouts
+      _plans
         ..clear()
         ..addAll(items);
     });
   }
 
-  Future<void> _showAddWorkoutDialog() async {
+  Future<void> _showAddPlanDialog() async {
     final nameController = TextEditingController();
     final detailsController = TextEditingController();
 
@@ -77,14 +115,14 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Nuovo allenamento'),
+          title: const Text('Nuova scheda'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               TextField(
                 controller: nameController,
                 decoration: const InputDecoration(
-                  labelText: 'Nome',
+                  labelText: 'Nome scheda',
                 ),
               ),
               const SizedBox(height: 12),
@@ -116,24 +154,89 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
     );
 
     if (result == true) {
-      final newWorkout = await _dataSource.addWorkout(
+      final newPlan = await _dataSource.addPlan(
         name: nameController.text.trim(),
         details: detailsController.text.trim(),
       );
-      setState(() {
-        _workouts.insert(0, newWorkout);
-      });
+      await _dataSource.setCurrentPlan(newPlan.id);
+      await _loadPlans();
     }
   }
 
-  Future<void> _removeWorkout(int id) async {
-    await _dataSource.deleteWorkout(id);
-    await _loadWorkouts();
+  Future<void> _removePlan(int id) async {
+    await _dataSource.deletePlan(id);
+    await _loadPlans();
+  }
+
+  void _openPlan(WorkoutPlan plan) {
+    context.pushNamed(
+      RoutePaths.workoutPlanDetailName,
+      pathParameters: {'planId': '${plan.id}'},
+      extra: plan.name,
+    );
+  }
+
+  Future<bool> _confirmDelete(BuildContext context, WorkoutPlan plan) async {
+    final result = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Elimina scheda'),
+        content: Text('Sei sicuro di voler eliminare la scheda "${plan.name}"?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text('Annulla'),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text('Elimina'),
+          ),
+        ],
+      ),
+    );
+    return result ?? false;
+  }
+
+  Widget _buildCurrentBackground(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      alignment: Alignment.centerLeft,
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Row(
+        children: [
+          Icon(Icons.check_circle, color: Theme.of(context).colorScheme.primary),
+          const SizedBox(width: 8),
+          const Text('Imposta come corrente'),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDeleteBackground(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.error.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      alignment: Alignment.centerRight,
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          const Text('Elimina'),
+          const SizedBox(width: 8),
+          Icon(Icons.delete_outline, color: Theme.of(context).colorScheme.error),
+        ],
+      ),
+    );
   }
 }
 
-class _AddWorkoutCard extends StatelessWidget {
-  const _AddWorkoutCard({required this.onTap});
+class _AddPlanCard extends StatelessWidget {
+  const _AddPlanCard({required this.onTap});
 
   final VoidCallback onTap;
 
@@ -169,7 +272,7 @@ class _AddWorkoutCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Nuovo allenamento',
+                    'Nuova scheda',
                     style: Theme.of(context)
                         .textTheme
                         .titleMedium

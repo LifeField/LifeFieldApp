@@ -9,6 +9,10 @@ class RoutePaths {
   static const mealDetailName = 'meal-detail';
   static const workout = '/workout';
   static const workoutName = 'workout';
+  static const workoutPlanDetail = '$workout/:planId';
+  static const workoutPlanDetailName = 'workout-plan-detail';
+  static const profile = '/profile';
+  static const profileName = 'profile';
 
   static String mealDetailFor(int mealIndex) => '$mealBase/$mealIndex';
 }

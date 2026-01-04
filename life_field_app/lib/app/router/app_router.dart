@@ -4,9 +4,11 @@ import 'package:go_router/go_router.dart';
 import '../../features/auth/application/auth_notifier.dart';
 import '../../features/auth/presentation/login/login_screen.dart';
 import '../../features/profile/presentation/settings_screen.dart';
+import '../../features/profile/presentation/profile_screen.dart';
 import '../../features/shared/presentation/admin_home_screen.dart';
 import '../../features/shared/presentation/client_home_screen.dart';
 import '../../features/shared/presentation/meal_detail_screen.dart';
+import '../../features/shared/presentation/workout_plan_detail_screen.dart';
 import '../../features/shared/presentation/workout_screen.dart';
 import '../../features/shared/presentation/pro_home_screen.dart';
 import 'go_router_refresh_stream.dart';
@@ -61,9 +63,31 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const SettingsScreen(),
       ),
       GoRoute(
+        name: RoutePaths.profileName,
+        path: RoutePaths.profile,
+        builder: (context, state) => const ProfileScreen(),
+      ),
+      GoRoute(
         name: RoutePaths.workoutName,
         path: RoutePaths.workout,
         builder: (context, state) => const WorkoutScreen(),
+        routes: [
+          GoRoute(
+            name: RoutePaths.workoutPlanDetailName,
+            path: ':planId',
+            builder: (context, state) {
+              final planId = int.tryParse(state.pathParameters['planId'] ?? '');
+              if (planId == null) {
+                return const WorkoutScreen();
+              }
+              final planName = state.extra is String ? state.extra as String : null;
+              return WorkoutPlanDetailScreen(
+                planId: planId,
+                planName: planName,
+              );
+            },
+          ),
+        ],
       ),
       GoRoute(
         name: RoutePaths.mealDetailName,

@@ -1,0 +1,9356 @@
+[
+  {
+    "id": "EX0001",
+    "nome": "Panca piana con bilanciere",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0002",
+    "nome": "Distensioni su panca con manubri",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0003",
+    "nome": "Panca inclinata con bilanciere",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca inclinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0004",
+    "nome": "Panca declinata con bilanciere",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0005",
+    "nome": "Croci con manubri su panca",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0006",
+    "nome": "Croci ai cavi",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0007",
+    "nome": "Chest press alla macchina",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Chest press machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0008",
+    "nome": "Dip alle parallele (focus petto)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0009",
+    "nome": "Push-up",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Core",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0010",
+    "nome": "Pec deck",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Pec deck"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0011",
+    "nome": "Pullover con manubrio",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0012",
+    "nome": "Squeeze press con manubri",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0013",
+    "nome": "Croci ai cavi - presa stretta",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0014",
+    "nome": "Croci ai cavi - basse ripetizioni",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0015",
+    "nome": "Croci ai cavi - inclinata 30°",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0016",
+    "nome": "Croci ai cavi - presa stretta - pausa 1s in allungamento",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Serrato",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0017",
+    "nome": "Panca declinata con bilanciere - inclinata 15°",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0018",
+    "nome": "Panca declinata con bilanciere - presa stretta - bilaterale - inclinata 45°",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0019",
+    "nome": "Panca declinata con bilanciere - declinata",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0020",
+    "nome": "Panca declinata con bilanciere - tempo 3-1-1",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0021",
+    "nome": "Croci ai cavi - presa larga - cluster set",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Shoulder press machine"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0022",
+    "nome": "Croci ai cavi - pausa 2s in contrazione - declinata",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0023",
+    "nome": "Dip alle parallele (focus petto) - stance stretto",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Trapezi",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Dip station",
+      "Tappetino"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0024",
+    "nome": "Dip alle parallele (focus petto) - presa stretta - tempo 2-0-2",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0025",
+    "nome": "Dip alle parallele (focus petto) (2)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Tricipiti",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Dip station",
+      "Bosu"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0026",
+    "nome": "Panca declinata con bilanciere - stance medio",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0027",
+    "nome": "Pullover con manubrio (2)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0028",
+    "nome": "Pullover con manubrio - stance sumo - a ROM completo",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0029",
+    "nome": "Pullover con manubrio (3)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0030",
+    "nome": "Push-up - stance stretto - cluster set",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0031",
+    "nome": "Pullover con manubrio (4)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Swiss ball"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0032",
+    "nome": "Pullover con manubrio - presa larga - tempo 3-1-1 - basse ripetizioni",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Dip station"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0033",
+    "nome": "Pullover con manubrio - pausa 1s in allungamento",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0034",
+    "nome": "Squeeze press con manubri - presa larga",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0035",
+    "nome": "Squeeze press con manubri - a ROM completo - metodo rest-pause",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Tricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0036",
+    "nome": "Squeeze press con manubri - presa prona - isometrico",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0037",
+    "nome": "Panca declinata con bilanciere - presa stretta",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Core",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0038",
+    "nome": "Panca declinata con bilanciere - presa media - isometrico",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0039",
+    "nome": "Panca declinata con bilanciere (2)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0040",
+    "nome": "Panca declinata con bilanciere - presa neutra - stance sumo",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0041",
+    "nome": "Panca piana con bilanciere - declinata",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0042",
+    "nome": "Panca piana con bilanciere (2)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca",
+      "Bosu"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0043",
+    "nome": "Panca piana con bilanciere - pausa 1s in allungamento",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0044",
+    "nome": "Panca piana con bilanciere - parziale (bottom)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core",
+      "Serrato",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0045",
+    "nome": "Dip alle parallele (focus petto) (3)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0046",
+    "nome": "Dip alle parallele (focus petto) - bilaterale - piana",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Dip station",
+      "Chest press machine"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0047",
+    "nome": "Squeeze press con manubri - stance stretto",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0048",
+    "nome": "Squeeze press con manubri - inclinata 15°",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0049",
+    "nome": "Croci con manubri su panca (2)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0050",
+    "nome": "Croci ai cavi - presa media - stance medio - pausa 2s in contrazione",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Serrato",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Calf raise machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0051",
+    "nome": "Croci ai cavi - pausa 2s in contrazione",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Trapezi",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0052",
+    "nome": "Croci ai cavi (2)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Trapezi",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0053",
+    "nome": "Pec deck - presa neutra - pausa 2s in contrazione",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Pec deck",
+      "Leg extension"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0054",
+    "nome": "Pec deck - presa neutra",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Pec deck"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0055",
+    "nome": "Pec deck - presa stretta - con fermo - isometrico - piana",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pec deck"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0056",
+    "nome": "Panca declinata con bilanciere - parziale (top)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata",
+      "Step"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0057",
+    "nome": "Panca declinata con bilanciere - presa stretta (2)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca declinata"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0058",
+    "nome": "Panca piana con bilanciere - parziale (bottom) (2)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca",
+      "Leg press"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0059",
+    "nome": "Panca piana con bilanciere (3)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0060",
+    "nome": "Distensioni su panca con manubri - stance sumo",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0061",
+    "nome": "Distensioni su panca con manubri (2)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Spalle",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0062",
+    "nome": "Dip alle parallele (focus petto) - con fermo",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0063",
+    "nome": "Dip alle parallele (focus petto) (4)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0064",
+    "nome": "Dip alle parallele (focus petto) - presa stretta",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0065",
+    "nome": "Dip alle parallele (focus petto) (5)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0066",
+    "nome": "Croci con manubri su panca - tempo 3-1-1",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0067",
+    "nome": "Croci con manubri su panca - presa stretta - tempo 3-1-1 - piana",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Cable pulley"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0068",
+    "nome": "Croci con manubri su panca - stance medio - a ROM completo",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0069",
+    "nome": "Croci con manubri su panca (3)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0070",
+    "nome": "Panca piana con bilanciere (4)",
+    "muscoloTarget": "Petto",
+    "muscoliSecondari": [
+      "Serrato",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0071",
+    "nome": "Trazioni alla sbarra",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Lombari",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0072",
+    "nome": "Lat machine presa larga",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Lat machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0073",
+    "nome": "Rematore con bilanciere",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0074",
+    "nome": "Rematore con manubrio",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0075",
+    "nome": "Pulley basso",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0076",
+    "nome": "Pulldown ai cavi",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Romboidi",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0077",
+    "nome": "T-Bar row",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "T-Bar row"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0078",
+    "nome": "Stacco da terra",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Bicipiti",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0079",
+    "nome": "Stacco rumeno",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Romboidi",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0080",
+    "nome": "Rematore al pulley",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0081",
+    "nome": "Face pull",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0082",
+    "nome": "Pull-over ai cavi",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0083",
+    "nome": "Pulley basso - presa a martello - split stance",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0084",
+    "nome": "Pulley basso - con fermo",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Pulley",
+      "Sbarra trazioni"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0085",
+    "nome": "Pulley basso - presa prona",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pulley",
+      "Smith Machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0086",
+    "nome": "Stacco rumeno - stance largo",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Corda"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0087",
+    "nome": "Stacco rumeno (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0088",
+    "nome": "Stacco rumeno - presa a martello - tempo 2-0-2",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Lombari",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0089",
+    "nome": "Stacco rumeno (3)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0090",
+    "nome": "T-Bar row (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Romboidi",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "T-Bar row"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0091",
+    "nome": "T-Bar row - parziale (top)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "T-Bar row"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0092",
+    "nome": "Rematore con manubrio - presa prona",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0093",
+    "nome": "Rematore con manubrio - stance stretto - parziale (top) - dropset",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Pec deck"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0094",
+    "nome": "Lat machine presa larga - metodo rest-pause",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Lat machine"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0095",
+    "nome": "Lat machine presa larga (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Lat machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0096",
+    "nome": "Face pull - isometrico",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi",
+      "Lombari",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0097",
+    "nome": "Face pull - presa media - tempo 3-1-1",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0098",
+    "nome": "Face pull - presa supina - tempo 2-0-2 - dropset",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Romboidi"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0099",
+    "nome": "Face pull - presa supina - stance sumo",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Romboidi",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0100",
+    "nome": "Pulley basso - a ROM completo",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0101",
+    "nome": "Pulley basso - pausa 2s in contrazione",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Romboidi"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0102",
+    "nome": "Rematore con manubrio - presa larga",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0103",
+    "nome": "Rematore con manubrio (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0104",
+    "nome": "Rematore con manubrio - presa larga (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0105",
+    "nome": "Rematore con manubrio - pausa 2s in contrazione",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0106",
+    "nome": "Trazioni alla sbarra (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0107",
+    "nome": "Trazioni alla sbarra - stance medio",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Romboidi",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0108",
+    "nome": "Lat machine presa larga - presa stretta - tempo 2-0-2",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Trapezi",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Lat machine"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0109",
+    "nome": "Face pull (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Romboidi",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0110",
+    "nome": "Face pull (3)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Pec deck"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0111",
+    "nome": "Face pull - presa media - pausa 1s in allungamento",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Cable pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0112",
+    "nome": "Rematore con manubrio (3)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0113",
+    "nome": "Rematore con manubrio - unilaterale - pausa 1s in allungamento",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0114",
+    "nome": "Pull-over ai cavi (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Bicipiti",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Hack squat"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0115",
+    "nome": "Pull-over ai cavi - presa supina - split stance - dropset",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Core",
+      "Romboidi"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0116",
+    "nome": "Rematore al pulley - presa larga",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0117",
+    "nome": "Rematore al pulley - presa prona - split stance",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0118",
+    "nome": "Rematore al pulley - presa neutra",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0119",
+    "nome": "Lat machine presa larga - tempo 3-1-1",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Lat machine"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0120",
+    "nome": "T-Bar row - metodo rest-pause",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Romboidi"
+    ],
+    "materialeNecessario": [
+      "T-Bar row"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0121",
+    "nome": "T-Bar row - parziale (bottom)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "T-Bar row"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0122",
+    "nome": "Rematore al pulley (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pulley",
+      "Corda"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0123",
+    "nome": "Rematore al pulley - tempo 2-0-2",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0124",
+    "nome": "Rematore al pulley - presa prona - parziale (top)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0125",
+    "nome": "Trazioni alla sbarra - presa neutra",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0126",
+    "nome": "Trazioni alla sbarra - presa neutra - split stance - dropset",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0127",
+    "nome": "Trazioni alla sbarra - presa media - bilaterale",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni",
+      "Shoulder press machine"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0128",
+    "nome": "Trazioni alla sbarra - stance sumo",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0129",
+    "nome": "Rematore al pulley - tempo 3-1-1",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Pulley",
+      "T-Bar row"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0130",
+    "nome": "Rematore al pulley - dropset",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Romboidi"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0131",
+    "nome": "Rematore con manubrio - stance stretto - pausa 1s in allungamento",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0132",
+    "nome": "Rematore con manubrio - stance stretto - bilaterale - tempo 2-0-2",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Core",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0133",
+    "nome": "Face pull (4)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0134",
+    "nome": "Face pull (5)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Pec deck"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0135",
+    "nome": "Face pull - stance largo - unilaterale",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Trapezi",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0136",
+    "nome": "Stacco da terra - tempo 2-0-2 - isometrico",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0137",
+    "nome": "Pulldown ai cavi - isometrico",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0138",
+    "nome": "Pulldown ai cavi - presa stretta",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0139",
+    "nome": "Face pull - stance stretto",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0140",
+    "nome": "Face pull (6)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0141",
+    "nome": "Face pull - tempo 2-0-2",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0142",
+    "nome": "Face pull - presa media - stance largo - tempo 3-1-1",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0143",
+    "nome": "Pulldown ai cavi (2)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0144",
+    "nome": "Pulldown ai cavi - presa a martello - pausa 2s in contrazione",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0145",
+    "nome": "Pulldown ai cavi (3)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Romboidi"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0146",
+    "nome": "Pulldown ai cavi - presa neutra - tempo 3-1-1",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0147",
+    "nome": "Trazioni alla sbarra - stance stretto - tempo 3-1-1",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Lombari",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0148",
+    "nome": "Trazioni alla sbarra - stance largo",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0149",
+    "nome": "Pulley basso - metodo rest-pause",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Pulley"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0150",
+    "nome": "Rematore con manubrio - a ROM completo - cluster set",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0151",
+    "nome": "Rematore con manubrio - con fermo",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0152",
+    "nome": "Stacco rumeno - a ROM completo - pausa 2s in contrazione",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0153",
+    "nome": "Stacco rumeno - presa a martello - stance medio",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0154",
+    "nome": "Stacco rumeno - presa stretta",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Romboidi",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0155",
+    "nome": "Trazioni alla sbarra (3)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0156",
+    "nome": "Rematore con manubrio (4)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Romboidi",
+      "Lombari",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0157",
+    "nome": "Rematore con manubrio (5)",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0158",
+    "nome": "T-Bar row - con fermo - isometrico",
+    "muscoloTarget": "Dorso",
+    "muscoliSecondari": [
+      "Lombari",
+      "Avambracci",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "T-Bar row"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0159",
+    "nome": "Military press con bilanciere",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Tricipiti",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0160",
+    "nome": "Shoulder press con manubri",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0161",
+    "nome": "Alzate laterali con manubri",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0162",
+    "nome": "Alzate frontali con manubri",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0163",
+    "nome": "Reverse fly ai cavi",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0164",
+    "nome": "Arnold press",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0165",
+    "nome": "Shoulder press alla macchina",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Shoulder press machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0166",
+    "nome": "Alzate laterali ai cavi",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Petto",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0167",
+    "nome": "High pull con bilanciere",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Tricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0168",
+    "nome": "Pike push-up",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0169",
+    "nome": "Face pull (7)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0170",
+    "nome": "Y-raise con elastici",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0171",
+    "nome": "Military press con bilanciere - presa supina",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0172",
+    "nome": "Military press con bilanciere - presa neutra - stance medio",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack",
+      "Trap bar"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0173",
+    "nome": "Military press con bilanciere (2)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0174",
+    "nome": "Military press con bilanciere - presa prona - inclinata 15°",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0175",
+    "nome": "Y-raise con elastici - pausa 1s in allungamento",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0176",
+    "nome": "Y-raise con elastici - presa a martello - tempo 2-0-2",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Elastici",
+      "Panca inclinata"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0177",
+    "nome": "Alzate frontali con manubri - tempo 2-0-2",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Step"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0178",
+    "nome": "Alzate frontali con manubri - stance medio",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0179",
+    "nome": "Face pull - presa media",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0180",
+    "nome": "Face pull - piana",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Calf raise machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0181",
+    "nome": "Face pull - split stance - parziale (bottom)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0182",
+    "nome": "Alzate laterali con manubri - presa neutra",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0183",
+    "nome": "Alzate laterali ai cavi - pausa 2s in contrazione",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0184",
+    "nome": "Alzate laterali ai cavi - stance sumo",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0185",
+    "nome": "Alzate laterali ai cavi (2)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0186",
+    "nome": "Alzate laterali con manubri - declinata",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0187",
+    "nome": "Military press con bilanciere - tempo 2-0-2",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack",
+      "T-Bar row"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0188",
+    "nome": "High pull con bilanciere - pausa 1s in allungamento",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0189",
+    "nome": "High pull con bilanciere - pausa 2s in contrazione",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0190",
+    "nome": "High pull con bilanciere - stance stretto - pausa 2s in contrazione",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0191",
+    "nome": "Shoulder press alla macchina - presa supina - inclinata 15°",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Tricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Shoulder press machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0192",
+    "nome": "Shoulder press alla macchina (2)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Shoulder press machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0193",
+    "nome": "Shoulder press alla macchina (3)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Tricipiti",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Shoulder press machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0194",
+    "nome": "Shoulder press alla macchina (4)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Shoulder press machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0195",
+    "nome": "Y-raise con elastici - presa neutra",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0196",
+    "nome": "Pike push-up - split stance - bilaterale - pausa 2s in contrazione",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0197",
+    "nome": "Pike push-up - presa supina - parziale (bottom)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0198",
+    "nome": "Pike push-up - cluster set",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0199",
+    "nome": "Pike push-up - stance medio - inclinata 45°",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0200",
+    "nome": "High pull con bilanciere - inclinata 15°",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0201",
+    "nome": "High pull con bilanciere - con fermo",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0202",
+    "nome": "High pull con bilanciere - tempo 3-1-1 - inclinata 30°",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0203",
+    "nome": "Y-raise con elastici - presa prona - parziale (bottom) - pausa 1s in allungamento",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0204",
+    "nome": "Y-raise con elastici (2)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0205",
+    "nome": "Y-raise con elastici (3)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0206",
+    "nome": "Shoulder press con manubri - parziale (top) - pausa 1s in allungamento",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Petto",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0207",
+    "nome": "Military press con bilanciere - presa neutra - a ROM completo - inclinata 30°",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Tricipiti",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0208",
+    "nome": "Military press con bilanciere - con fermo - piana",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0209",
+    "nome": "Y-raise con elastici (4)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Elastici",
+      "Bosu"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0210",
+    "nome": "Y-raise con elastici - stance largo - parziale (top)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0211",
+    "nome": "Y-raise con elastici (5)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0212",
+    "nome": "Y-raise con elastici - stance medio - isometrico",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0213",
+    "nome": "Y-raise con elastici - stance medio",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0214",
+    "nome": "Reverse fly ai cavi (2)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0215",
+    "nome": "Alzate laterali ai cavi (3)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Leg extension"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0216",
+    "nome": "Alzate frontali con manubri - stance sumo",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Landmine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0217",
+    "nome": "Alzate frontali con manubri - presa larga - isometrico",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Leg extension"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0218",
+    "nome": "Alzate frontali con manubri - presa stretta - stance medio - pausa 2s in contrazione",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0219",
+    "nome": "Alzate frontali con manubri - stance largo",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0220",
+    "nome": "Arnold press - presa a martello - stance medio - parziale (top)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Cintura zavorra"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0221",
+    "nome": "Arnold press - presa supina",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0222",
+    "nome": "High pull con bilanciere - presa supina - piana",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0223",
+    "nome": "High pull con bilanciere - parziale (bottom) - tempo 2-0-2",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0224",
+    "nome": "High pull con bilanciere - presa a martello",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0225",
+    "nome": "High pull con bilanciere - presa supina",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0226",
+    "nome": "Shoulder press con manubri - unilaterale - dropset",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0227",
+    "nome": "Shoulder press con manubri (2)",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0228",
+    "nome": "Arnold press - inclinata 15°",
+    "muscoloTarget": "Spalle",
+    "muscoliSecondari": [
+      "Petto",
+      "Tricipiti",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0229",
+    "nome": "Curl con bilanciere",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0230",
+    "nome": "Curl con manubri alternati",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0231",
+    "nome": "Curl a martello",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0232",
+    "nome": "Curl alla macchina",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Macchina"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0233",
+    "nome": "Curl ai cavi",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0234",
+    "nome": "Curl su panca Scott (barra EZ)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0235",
+    "nome": "Curl concentrato",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0236",
+    "nome": "Curl inverso con barra EZ",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0237",
+    "nome": "Chin-up",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0238",
+    "nome": "Curl con elastici",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0239",
+    "nome": "Curl concentrato - stance largo - alte ripetizioni",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0240",
+    "nome": "Curl concentrato - pausa 1s in allungamento",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0241",
+    "nome": "Curl con manubri alternati (2)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0242",
+    "nome": "Curl con manubri alternati - presa larga - bilaterale",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0243",
+    "nome": "Curl con manubri alternati - presa larga",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0244",
+    "nome": "Curl con manubri alternati - presa stretta",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0245",
+    "nome": "Curl con elastici - presa larga - tempo 2-0-2",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0246",
+    "nome": "Curl inverso con barra EZ - presa a martello",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0247",
+    "nome": "Curl inverso con barra EZ - parziale (bottom) - pausa 2s in contrazione",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Spalle",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Sandbag"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0248",
+    "nome": "Curl inverso con barra EZ (2)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0249",
+    "nome": "Curl inverso con barra EZ (3)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Landmine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0250",
+    "nome": "Curl inverso con barra EZ (4)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0251",
+    "nome": "Curl inverso con barra EZ - presa stretta - stance medio",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0252",
+    "nome": "Curl con manubri alternati - presa prona - stance largo",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0253",
+    "nome": "Curl con manubri alternati - presa media",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0254",
+    "nome": "Curl con elastici - parziale (bottom) - alte ripetizioni",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0255",
+    "nome": "Curl con elastici - unilaterale",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Avambracci",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0256",
+    "nome": "Curl su panca Scott (barra EZ) (2)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Dorso",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca",
+      "Panca declinata"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0257",
+    "nome": "Curl su panca Scott (barra EZ) - presa media - parziale (bottom) - pausa 2s in contrazione",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca",
+      "Leg extension"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0258",
+    "nome": "Curl a martello - presa neutra",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0259",
+    "nome": "Curl inverso con barra EZ - parziale (top) - tempo 2-0-2",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0260",
+    "nome": "Curl inverso con barra EZ - stance sumo",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0261",
+    "nome": "Curl inverso con barra EZ - presa neutra - stance medio",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0262",
+    "nome": "Curl inverso con barra EZ (5)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0263",
+    "nome": "Curl inverso con barra EZ (6)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0264",
+    "nome": "Curl ai cavi - presa a martello",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Spalle",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0265",
+    "nome": "Curl ai cavi - stance largo - tempo 2-0-2",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0266",
+    "nome": "Curl ai cavi (2)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0267",
+    "nome": "Curl inverso con barra EZ - presa stretta - pausa 2s in contrazione",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0268",
+    "nome": "Curl inverso con barra EZ (7)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0269",
+    "nome": "Curl su panca Scott (barra EZ) - stance sumo - bilaterale - dropset",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0270",
+    "nome": "Curl su panca Scott (barra EZ) - stance largo - con fermo - pausa 1s in allungamento",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0271",
+    "nome": "Curl su panca Scott (barra EZ) - stance sumo",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0272",
+    "nome": "Curl su panca Scott (barra EZ) - presa stretta - stance sumo - parziale (top)",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0273",
+    "nome": "Curl su panca Scott (barra EZ) - stance medio - cluster set",
+    "muscoloTarget": "Bicipiti",
+    "muscoliSecondari": [
+      "Dorso",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca",
+      "Swiss ball"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0274",
+    "nome": "French press con bilanciere",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0275",
+    "nome": "Estensioni tricipiti ai cavi",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Petto",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0276",
+    "nome": "Pushdown ai cavi",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0277",
+    "nome": "Dip alle parallele (focus tricipiti)",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0278",
+    "nome": "Estensioni sopra la testa con manubrio",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0279",
+    "nome": "Skull crusher con barra EZ",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0280",
+    "nome": "Kickback con manubrio",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0281",
+    "nome": "Close grip bench press",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0282",
+    "nome": "Diamond push-up",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0283",
+    "nome": "Estensioni con elastici",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto",
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0284",
+    "nome": "Close grip bench press - presa neutra - unilaterale",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca",
+      "Cable pulley"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0285",
+    "nome": "Close grip bench press - a ROM completo",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca",
+      "Macchina"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0286",
+    "nome": "Kickback con manubrio - presa prona - cluster set",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0287",
+    "nome": "Kickback con manubrio - presa stretta",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0288",
+    "nome": "Kickback con manubrio - isometrico",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0289",
+    "nome": "Estensioni con elastici - presa prona - tempo 2-0-2",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Elastici",
+      "Dip station"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0290",
+    "nome": "Estensioni con elastici - tempo 2-0-2",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Petto",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0291",
+    "nome": "Estensioni con elastici - stance stretto",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0292",
+    "nome": "Pushdown ai cavi - tempo 3-1-1 - alte ripetizioni",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Petto",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0293",
+    "nome": "Pushdown ai cavi - unilaterale",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Petto",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0294",
+    "nome": "Estensioni tricipiti ai cavi - tempo 3-1-1",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Pec deck"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0295",
+    "nome": "Estensioni tricipiti ai cavi - pausa 2s in contrazione - basse ripetizioni",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0296",
+    "nome": "Estensioni tricipiti ai cavi - con fermo",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0297",
+    "nome": "Diamond push-up - con fermo - pausa 2s in contrazione",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0298",
+    "nome": "Diamond push-up - presa supina",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi",
+      "Corda"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0299",
+    "nome": "Skull crusher con barra EZ - stance stretto",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0300",
+    "nome": "Skull crusher con barra EZ - presa prona - con fermo",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0301",
+    "nome": "Dip alle parallele (focus tricipiti) - bilaterale",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0302",
+    "nome": "Close grip bench press - stance largo - metodo rest-pause",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca",
+      "Pesi liberi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0303",
+    "nome": "Close grip bench press - presa larga - con fermo",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca",
+      "Leg curl"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0304",
+    "nome": "French press con bilanciere - a ROM completo",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0305",
+    "nome": "Estensioni tricipiti ai cavi - con fermo - pausa 2s in contrazione - cluster set",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto",
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0306",
+    "nome": "Kickback con manubrio (2)",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0307",
+    "nome": "Close grip bench press - a ROM completo - tempo 2-0-2",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto",
+      "Core",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0308",
+    "nome": "Close grip bench press - presa a martello - a ROM completo",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0309",
+    "nome": "Skull crusher con barra EZ - presa a martello - a ROM completo",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0310",
+    "nome": "Skull crusher con barra EZ - stance medio",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca",
+      "Med Ball"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0311",
+    "nome": "Skull crusher con barra EZ (2)",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Barra EZ",
+      "Panca",
+      "Landmine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0312",
+    "nome": "Estensioni con elastici (2)",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Elastici",
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0313",
+    "nome": "French press con bilanciere (2)",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca",
+      "Ab wheel"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0314",
+    "nome": "French press con bilanciere - presa media",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Petto",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0315",
+    "nome": "French press con bilanciere - metodo rest-pause",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Spalle",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Panca"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0316",
+    "nome": "Kickback con manubrio - unilaterale",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0317",
+    "nome": "Kickback con manubrio - parziale (top)",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0318",
+    "nome": "Dip alle parallele (focus tricipiti) - stance stretto",
+    "muscoloTarget": "Tricipiti",
+    "muscoliSecondari": [
+      "Petto"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0319",
+    "nome": "Squat con bilanciere",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0320",
+    "nome": "Front squat",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0321",
+    "nome": "Leg press",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0322",
+    "nome": "Hack squat",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Adduttori",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Hack squat"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0323",
+    "nome": "Affondi con manubri",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Adduttori",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0324",
+    "nome": "Bulgarian split squat",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0325",
+    "nome": "Step-up",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0326",
+    "nome": "Leg extension",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Leg extension"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0327",
+    "nome": "Goblet squat",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Kettlebell"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0328",
+    "nome": "Sissy squat",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0329",
+    "nome": "Bulgarian split squat - stance stretto - cluster set",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0330",
+    "nome": "Leg press - stance stretto",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0331",
+    "nome": "Leg press - dropset",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0332",
+    "nome": "Leg press - stance largo - unilaterale",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0333",
+    "nome": "Front squat (2)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0334",
+    "nome": "Front squat - unilaterale",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0335",
+    "nome": "Bulgarian split squat - unilaterale",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0336",
+    "nome": "Bulgarian split squat (2)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0337",
+    "nome": "Bulgarian split squat - presa supina",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Pulley"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0338",
+    "nome": "Leg press - presa prona - a ROM completo",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0339",
+    "nome": "Leg press - parziale (bottom)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0340",
+    "nome": "Leg press - split stance - alte ripetizioni",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Adduttori",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0341",
+    "nome": "Leg press (2)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Femorali",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0342",
+    "nome": "Leg press - stance sumo - metodo rest-pause",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0343",
+    "nome": "Affondi con manubri - bilaterale",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0344",
+    "nome": "Affondi con manubri - bilaterale - pausa 2s in contrazione",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0345",
+    "nome": "Affondi con manubri - stance medio - alte ripetizioni",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0346",
+    "nome": "Affondi con manubri (2)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0347",
+    "nome": "Affondi con manubri - stance stretto - tempo 2-0-2",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0348",
+    "nome": "Affondi con manubri - tempo 3-1-1",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Anelli"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0349",
+    "nome": "Affondi con manubri - stance largo",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0350",
+    "nome": "Affondi con manubri - presa neutra",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0351",
+    "nome": "Affondi con manubri - presa larga",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Adduttori",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Landmine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0352",
+    "nome": "Affondi con manubri (3)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0353",
+    "nome": "Affondi con manubri (4)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Polpacci",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0354",
+    "nome": "Affondi con manubri - presa prona",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0355",
+    "nome": "Hack squat - presa a martello",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Hack squat"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0356",
+    "nome": "Hack squat (2)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Hack squat",
+      "TRX"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0357",
+    "nome": "Leg press (3)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Leg press",
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0358",
+    "nome": "Bulgarian split squat - a ROM completo",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0359",
+    "nome": "Bulgarian split squat - parziale (top)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0360",
+    "nome": "Bulgarian split squat - split stance - con fermo",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0361",
+    "nome": "Bulgarian split squat - stance stretto",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0362",
+    "nome": "Step-up (2)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Polpacci",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0363",
+    "nome": "Step-up - parziale (bottom)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri",
+      "Hack squat"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0364",
+    "nome": "Step-up - presa larga",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0365",
+    "nome": "Step-up - unilaterale - isometrico",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri",
+      "Pulley"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0366",
+    "nome": "Step-up (3)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0367",
+    "nome": "Bulgarian split squat - split stance",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0368",
+    "nome": "Bulgarian split squat - presa prona - stance stretto",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Hack squat"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0369",
+    "nome": "Bulgarian split squat - presa prona - stance largo",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0370",
+    "nome": "Bulgarian split squat - presa a martello - stance stretto",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0371",
+    "nome": "Front squat - stance sumo",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0372",
+    "nome": "Front squat - tempo 2-0-2",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Core",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack",
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0373",
+    "nome": "Sissy squat (2)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0374",
+    "nome": "Sissy squat - isometrico",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0375",
+    "nome": "Step-up - tempo 2-0-2",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Glutei",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0376",
+    "nome": "Bulgarian split squat - presa larga - stance medio",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Pulley"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0377",
+    "nome": "Bulgarian split squat - a ROM completo (2)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Smith Machine"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0378",
+    "nome": "Leg extension - stance medio",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Leg extension"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0379",
+    "nome": "Leg extension - tempo 2-0-2 - metodo rest-pause",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Leg extension"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0380",
+    "nome": "Leg press - presa prona",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Leg press",
+      "Leg curl"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0381",
+    "nome": "Leg press - presa a martello - pausa 2s in contrazione - isometrico",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Femorali",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0382",
+    "nome": "Squat con bilanciere (2)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Adduttori",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0383",
+    "nome": "Squat con bilanciere - bilaterale - pausa 1s in allungamento",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0384",
+    "nome": "Squat con bilanciere (3)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Femorali",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0385",
+    "nome": "Sissy squat - presa larga - parziale (bottom)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0386",
+    "nome": "Sissy squat - con fermo",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0387",
+    "nome": "Sissy squat (3)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0388",
+    "nome": "Sissy squat - presa stretta - stance medio - unilaterale - tempo 2-0-2",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0389",
+    "nome": "Hack squat (3)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Hack squat"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0390",
+    "nome": "Hack squat - metodo rest-pause",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Hack squat"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0391",
+    "nome": "Hack squat (4)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Hack squat"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0392",
+    "nome": "Leg press (4)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Polpacci",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0393",
+    "nome": "Leg press - presa larga - pausa 1s in allungamento",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0394",
+    "nome": "Leg press (5)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Leg press",
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0395",
+    "nome": "Leg press - presa media",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0396",
+    "nome": "Bulgarian split squat - presa prona",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0397",
+    "nome": "Bulgarian split squat (3)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Glutei",
+      "Polpacci",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0398",
+    "nome": "Hack squat - parziale (top)",
+    "muscoloTarget": "Quadricipiti",
+    "muscoliSecondari": [
+      "Core",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Hack squat"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0399",
+    "nome": "Stacco rumeno (4)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0400",
+    "nome": "Leg curl",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Leg curl"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0401",
+    "nome": "Good morning",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0402",
+    "nome": "Nordic hamstring curl",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Glutei",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0403",
+    "nome": "Hip hinge con kettlebell",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Kettlebell"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0404",
+    "nome": "Glute ham raise",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Glute ham raise"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0405",
+    "nome": "Stacco a una gamba con manubri",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0406",
+    "nome": "Cable pull-through",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Core",
+      "Adduttori",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0407",
+    "nome": "GHD hip extension",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "GHD"
+    ],
+    "difficolta": 5,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0408",
+    "nome": "Leg curl - presa prona",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Lombari",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Leg curl",
+      "Hack squat"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0409",
+    "nome": "Leg curl - presa a martello",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Glutei",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Leg curl"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0410",
+    "nome": "Leg curl - stance medio - pausa 2s in contrazione",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Leg curl"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0411",
+    "nome": "Stacco rumeno (5)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0412",
+    "nome": "Stacco rumeno - presa neutra - tempo 2-0-2",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0413",
+    "nome": "Stacco rumeno - presa media - pausa 2s in contrazione",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Adduttori",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Bosu"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0414",
+    "nome": "Nordic hamstring curl - presa stretta",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0415",
+    "nome": "Glute ham raise - presa larga - stance medio",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Glute ham raise"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0416",
+    "nome": "Glute ham raise (2)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Glute ham raise"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0417",
+    "nome": "Good morning - presa prona - unilaterale",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Lombari",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0418",
+    "nome": "Good morning - metodo rest-pause",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0419",
+    "nome": "Good morning (2)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0420",
+    "nome": "Nordic hamstring curl - bilaterale - tempo 2-0-2",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0421",
+    "nome": "Nordic hamstring curl - stance sumo - con fermo - basse ripetizioni",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Core",
+      "Polpacci",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0422",
+    "nome": "Nordic hamstring curl - isometrico",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0423",
+    "nome": "Hip hinge con kettlebell - stance sumo",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Lombari",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Kettlebell"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0424",
+    "nome": "Hip hinge con kettlebell - bilaterale",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Kettlebell"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0425",
+    "nome": "Nordic hamstring curl (2)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Lombari",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi",
+      "Calf raise machine"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0426",
+    "nome": "Nordic hamstring curl - presa stretta - split stance - parziale (bottom)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi",
+      "Sbarra trazioni"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0427",
+    "nome": "Leg curl - pausa 2s in contrazione",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Leg curl"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0428",
+    "nome": "Good morning - pausa 2s in contrazione",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Core",
+      "Polpacci",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "TRX"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0429",
+    "nome": "Good morning (3)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "T-Bar row"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0430",
+    "nome": "Good morning - isometrico",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Sandbag"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0431",
+    "nome": "Good morning - stance sumo - cluster set",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Glutei",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0432",
+    "nome": "GHD hip extension - presa stretta - alte ripetizioni",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "GHD"
+    ],
+    "difficolta": 5,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0433",
+    "nome": "GHD hip extension - presa a martello - pausa 1s in allungamento",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Lombari",
+      "Core",
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "GHD"
+    ],
+    "difficolta": 5,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0434",
+    "nome": "GHD hip extension - presa supina",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Glutei",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "GHD"
+    ],
+    "difficolta": 5,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0435",
+    "nome": "GHD hip extension (2)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "GHD"
+    ],
+    "difficolta": 5,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0436",
+    "nome": "Stacco a una gamba con manubri - presa stretta - metodo rest-pause",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0437",
+    "nome": "Stacco a una gamba con manubri - presa stretta",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Glutei",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0438",
+    "nome": "Stacco a una gamba con manubri - stance medio",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0439",
+    "nome": "Stacco a una gamba con manubri - parziale (top)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci",
+      "Core",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0440",
+    "nome": "Nordic hamstring curl - presa prona - stance stretto",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Core",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0441",
+    "nome": "Nordic hamstring curl - presa a martello - pausa 2s in contrazione",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Lombari",
+      "Polpacci",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0442",
+    "nome": "Nordic hamstring curl - stance stretto - cluster set",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Glutei",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0443",
+    "nome": "Leg curl - presa prona - parziale (bottom)",
+    "muscoloTarget": "Femorali",
+    "muscoliSecondari": [
+      "Polpacci"
+    ],
+    "materialeNecessario": [
+      "Leg curl"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0444",
+    "nome": "Hip thrust con bilanciere",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Lombari",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Hip thrust bench"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0445",
+    "nome": "Glute bridge",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Lombari",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0446",
+    "nome": "Affondi indietro",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0447",
+    "nome": "Cable kickback",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0448",
+    "nome": "Step-up alto",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0449",
+    "nome": "Squat sumo",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Quadricipiti",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0450",
+    "nome": "Kettlebell swing",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Lombari",
+      "Quadricipiti"
+    ],
+    "materialeNecessario": [
+      "Kettlebell"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0451",
+    "nome": "Sled push",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0452",
+    "nome": "Bulgarian split squat (focus glutei)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0453",
+    "nome": "Abduzioni alla macchina",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Macchina"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0454",
+    "nome": "Sled push - presa a martello - a ROM completo",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0455",
+    "nome": "Sled push - pausa 1s in allungamento",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Lombari",
+      "Femorali",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0456",
+    "nome": "Sled push - presa supina",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0457",
+    "nome": "Glute bridge - con fermo",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Abduttori",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0458",
+    "nome": "Glute bridge - parziale (bottom)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Femorali",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0459",
+    "nome": "Cable kickback - parziale (bottom) - tempo 3-1-1",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0460",
+    "nome": "Cable kickback (2)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Lombari",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0461",
+    "nome": "Cable kickback - metodo rest-pause",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Abduttori",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0462",
+    "nome": "Step-up alto - presa stretta",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0463",
+    "nome": "Step-up alto (2)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Quadricipiti",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0464",
+    "nome": "Squat sumo - tempo 2-0-2",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0465",
+    "nome": "Squat sumo (2)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core",
+      "Quadricipiti",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0466",
+    "nome": "Hip thrust con bilanciere - basse ripetizioni",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Hip thrust bench"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0467",
+    "nome": "Sled push - presa a martello - pausa 1s in allungamento",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Sled",
+      "Leg extension"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0468",
+    "nome": "Sled push - presa media - tempo 2-0-2 - isometrico",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Abduttori",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0469",
+    "nome": "Sled push (2)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Abduttori",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0470",
+    "nome": "Bulgarian split squat (focus glutei) (2)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core",
+      "Quadricipiti",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0471",
+    "nome": "Bulgarian split squat (focus glutei) - tempo 2-0-2",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0472",
+    "nome": "Bulgarian split squat (focus glutei) - presa neutra - pausa 2s in contrazione",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Abduttori",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0473",
+    "nome": "Bulgarian split squat (focus glutei) - parziale (top)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Lombari",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0474",
+    "nome": "Step-up alto - presa stretta - stance largo - a ROM completo",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Quadricipiti"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0475",
+    "nome": "Step-up alto - presa stretta - split stance - unilaterale",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Quadricipiti"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Manubri"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0476",
+    "nome": "Hip thrust con bilanciere - presa neutra",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Hip thrust bench"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0477",
+    "nome": "Hip thrust con bilanciere - presa a martello - con fermo - dropset",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Hip thrust bench"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0478",
+    "nome": "Cable kickback - pausa 2s in contrazione",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Bosu"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0479",
+    "nome": "Cable kickback (3)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0480",
+    "nome": "Sled push - presa larga - isometrico",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core",
+      "Quadricipiti"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0481",
+    "nome": "Sled push - presa a martello - bilaterale - tempo 3-1-1",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0482",
+    "nome": "Sled push - stance stretto - a ROM completo - pausa 1s in allungamento",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Lombari",
+      "Quadricipiti",
+      "Adduttori"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0483",
+    "nome": "Sled push - stance medio",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0484",
+    "nome": "Sled push - presa prona",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Abduttori",
+      "Quadricipiti"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0485",
+    "nome": "Sled push - tempo 2-0-2",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Adduttori",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0486",
+    "nome": "Sled push (3)",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Abduttori",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Sled"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0487",
+    "nome": "Bulgarian split squat (focus glutei) - tempo 3-1-1 - basse ripetizioni",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Panca",
+      "Kettlebell"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0488",
+    "nome": "Cable kickback - presa prona",
+    "muscoloTarget": "Glutei",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Abduttori"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0489",
+    "nome": "Calf raise in piedi",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Tibiale anteriore"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0490",
+    "nome": "Calf raise seduto",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Calf raise machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0491",
+    "nome": "Calf raise alla leg press",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0492",
+    "nome": "Donkey calf raise",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0493",
+    "nome": "Calf raise su step",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Femorali",
+      "Tibiale anteriore",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Step"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0494",
+    "nome": "Calf raise con manubri",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Step"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0495",
+    "nome": "Calf raise in piedi - presa media - parziale (bottom)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0496",
+    "nome": "Calf raise in piedi (2)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Tibiale anteriore",
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0497",
+    "nome": "Calf raise su step (2)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core",
+      "Tibiale anteriore"
+    ],
+    "materialeNecessario": [
+      "Step"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0498",
+    "nome": "Calf raise su step (3)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Step"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0499",
+    "nome": "Calf raise alla leg press (2)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core",
+      "Tibiale anteriore"
+    ],
+    "materialeNecessario": [
+      "Leg press"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0500",
+    "nome": "Calf raise alla leg press (3)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Tibiale anteriore"
+    ],
+    "materialeNecessario": [
+      "Leg press",
+      "Barra EZ"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0501",
+    "nome": "Donkey calf raise - presa larga",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi",
+      "Leg curl"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0502",
+    "nome": "Donkey calf raise - stance stretto",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Tibiale anteriore",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0503",
+    "nome": "Calf raise in piedi (3)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi",
+      "Med Ball"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0504",
+    "nome": "Calf raise con manubri - presa supina - split stance",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Femorali",
+      "Tibiale anteriore"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Step",
+      "Trap bar"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0505",
+    "nome": "Calf raise con manubri (2)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Femorali",
+      "Tibiale anteriore"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "Step"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0506",
+    "nome": "Donkey calf raise (2)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0507",
+    "nome": "Donkey calf raise - a ROM completo",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core",
+      "Tibiale anteriore"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0508",
+    "nome": "Donkey calf raise - stance stretto (2)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0509",
+    "nome": "Calf raise su step - presa larga - stance largo",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core",
+      "Tibiale anteriore"
+    ],
+    "materialeNecessario": [
+      "Step",
+      "Kettlebell"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0510",
+    "nome": "Calf raise su step - stance largo - parziale (bottom) - alte ripetizioni",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core",
+      "Tibiale anteriore",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Step"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0511",
+    "nome": "Calf raise su step - stance largo - parziale (bottom)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Tibiale anteriore",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Step"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0512",
+    "nome": "Calf raise su step - presa prona - parziale (top)",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Step"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0513",
+    "nome": "Calf raise in piedi - stance sumo",
+    "muscoloTarget": "Polpacci",
+    "muscoliSecondari": [
+      "Tibiale anteriore"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0514",
+    "nome": "Crunch su tappetino",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari",
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0515",
+    "nome": "Plank",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Obliqui"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0516",
+    "nome": "Ab wheel rollout",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Obliqui"
+    ],
+    "materialeNecessario": [
+      "Ab wheel"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0517",
+    "nome": "Hanging leg raise",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Obliqui",
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0518",
+    "nome": "Cable crunch",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Obliqui"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0519",
+    "nome": "Reverse crunch",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari",
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0520",
+    "nome": "Dead bug",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0521",
+    "nome": "V-up",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Obliqui",
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0522",
+    "nome": "Swiss ball crunch",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Swiss ball"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0523",
+    "nome": "Hanging leg raise - presa stretta",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari",
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni",
+      "Glute ham raise"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0524",
+    "nome": "Hanging leg raise - stance largo - dropset",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari",
+      "Obliqui",
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0525",
+    "nome": "Hanging leg raise (2)",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari",
+      "Obliqui"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0526",
+    "nome": "Ab wheel rollout (2)",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari",
+      "Obliqui"
+    ],
+    "materialeNecessario": [
+      "Ab wheel"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0527",
+    "nome": "Ab wheel rollout - unilaterale",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Ab wheel"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0528",
+    "nome": "Cable crunch (2)",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Obliqui",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0529",
+    "nome": "Cable crunch - presa stretta",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Obliqui",
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0530",
+    "nome": "Ab wheel rollout - pausa 2s in contrazione",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Ab wheel",
+      "TRX"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0531",
+    "nome": "Ab wheel rollout - presa neutra - con fermo",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Ab wheel"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0532",
+    "nome": "Ab wheel rollout - presa media - stance sumo",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari",
+      "Flessori dell'anca",
+      "Obliqui"
+    ],
+    "materialeNecessario": [
+      "Ab wheel"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0533",
+    "nome": "Swiss ball crunch - unilaterale",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Swiss ball",
+      "Landmine"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0534",
+    "nome": "Swiss ball crunch (2)",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Swiss ball"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0535",
+    "nome": "Swiss ball crunch - presa larga",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Swiss ball",
+      "Plyo box"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0536",
+    "nome": "Swiss ball crunch - presa supina - pausa 2s in contrazione",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Obliqui"
+    ],
+    "materialeNecessario": [
+      "Swiss ball",
+      "Pec deck"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0537",
+    "nome": "Cable crunch (3)",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Obliqui",
+      "Lombari",
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Pulley"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0538",
+    "nome": "Cable crunch - stance sumo",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Obliqui",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Glute ham raise"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0539",
+    "nome": "Ab wheel rollout - presa larga",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Obliqui"
+    ],
+    "materialeNecessario": [
+      "Ab wheel",
+      "Panca declinata"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0540",
+    "nome": "Ab wheel rollout - stance largo - a ROM completo",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Obliqui"
+    ],
+    "materialeNecessario": [
+      "Ab wheel",
+      "Shoulder press machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0541",
+    "nome": "Ab wheel rollout - presa supina",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Obliqui",
+      "Lombari",
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Ab wheel",
+      "Glute ham raise"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0542",
+    "nome": "Ab wheel rollout - presa prona - tempo 2-0-2 - metodo rest-pause",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Ab wheel",
+      "Kettlebell"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0543",
+    "nome": "Crunch su tappetino (2)",
+    "muscoloTarget": "Addome",
+    "muscoliSecondari": [
+      "Flessori dell'anca"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0544",
+    "nome": "Russian twist",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Addome",
+      "Serrato",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Med Ball",
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0545",
+    "nome": "Side plank",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0546",
+    "nome": "Woodchopper ai cavi",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato",
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0547",
+    "nome": "Pallof press",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0548",
+    "nome": "Bicycle crunch",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0549",
+    "nome": "Windshield wipers",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Lombari",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 5,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0550",
+    "nome": "Farmer's carry (core)",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0551",
+    "nome": "Side plank (2)",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0552",
+    "nome": "Side plank - unilaterale",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0553",
+    "nome": "Side plank - presa supina",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Addome",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0554",
+    "nome": "Woodchopper ai cavi - con fermo",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato",
+      "Addome",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0555",
+    "nome": "Woodchopper ai cavi - presa media - stance largo",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato",
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Cavi",
+      "Panca declinata"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0556",
+    "nome": "Woodchopper ai cavi (2)",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato",
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0557",
+    "nome": "Farmer's carry (core) - presa media - a ROM completo",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Lombari"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0558",
+    "nome": "Farmer's carry (core) (2)",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Addome",
+      "Lombari",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0559",
+    "nome": "Woodchopper ai cavi - pausa 1s in allungamento",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato",
+      "Lombari",
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0560",
+    "nome": "Woodchopper ai cavi - a ROM completo",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Addome",
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0561",
+    "nome": "Side plank - presa neutra - tempo 3-1-1",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Lombari",
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0562",
+    "nome": "Side plank - presa neutra - parziale (bottom) - metodo rest-pause",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Serrato"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0563",
+    "nome": "Side plank - presa media - stance largo",
+    "muscoloTarget": "Obliqui",
+    "muscoliSecondari": [
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0564",
+    "nome": "Iperestensioni",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "GHD"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0565",
+    "nome": "Stacco da terra (2)",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0566",
+    "nome": "Good morning (4)",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Femorali",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0567",
+    "nome": "Back extension su panca romana",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Core",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Macchina"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0568",
+    "nome": "Superman",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Glutei",
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0569",
+    "nome": "Bird dog",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Glutei",
+      "Trapezi",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0570",
+    "nome": "Iperestensioni - split stance",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "GHD"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0571",
+    "nome": "Stacco da terra - a ROM completo - isometrico",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Core",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0572",
+    "nome": "Stacco da terra (3)",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Glutei",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0573",
+    "nome": "Stacco da terra (4)",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0574",
+    "nome": "Stacco da terra - pausa 2s in contrazione - dropset",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0575",
+    "nome": "Superman (2)",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0576",
+    "nome": "Superman - presa a martello",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0577",
+    "nome": "Iperestensioni - a ROM completo - pausa 2s in contrazione - alte ripetizioni",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "GHD"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0578",
+    "nome": "Iperestensioni - basse ripetizioni",
+    "muscoloTarget": "Lombari",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "GHD"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0579",
+    "nome": "Scrollate con manubri",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0580",
+    "nome": "Scrollate con bilanciere",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0581",
+    "nome": "Farmer's carry",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0582",
+    "nome": "Rack pull",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Dorso",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0583",
+    "nome": "Face pull (8)",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0584",
+    "nome": "High pull con bilanciere (2)",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0585",
+    "nome": "Farmer's carry - split stance",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0586",
+    "nome": "Farmer's carry - presa prona",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Spalle",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0587",
+    "nome": "Farmer's carry - presa media - a ROM completo",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0588",
+    "nome": "High pull con bilanciere - bilaterale",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Spalle",
+      "Avambracci"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0589",
+    "nome": "High pull con bilanciere - pausa 2s in contrazione (2)",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Avambracci",
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0590",
+    "nome": "High pull con bilanciere - alte ripetizioni",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0591",
+    "nome": "High pull con bilanciere - presa prona",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0592",
+    "nome": "Rack pull - parziale (bottom)",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Dorso",
+      "Avambracci",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0593",
+    "nome": "Rack pull - a ROM completo",
+    "muscoloTarget": "Trapezi",
+    "muscoliSecondari": [
+      "Spalle",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Rack"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0594",
+    "nome": "Wrist curl",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Bicipiti",
+      "Dorso"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0595",
+    "nome": "Reverse wrist curl",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0596",
+    "nome": "Farmer's hold",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0597",
+    "nome": "Pinch grip hold",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Dorso",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0598",
+    "nome": "Curl inverso con bilanciere",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Tricipiti",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0599",
+    "nome": "Pronazione/supinazione con manubrio",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Dorso",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0600",
+    "nome": "Curl inverso con bilanciere - presa larga - stance stretto",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0601",
+    "nome": "Curl inverso con bilanciere - stance medio",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Dorso",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0602",
+    "nome": "Pinch grip hold - parziale (top)",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0603",
+    "nome": "Reverse wrist curl (2)",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0604",
+    "nome": "Reverse wrist curl - a ROM completo - pausa 2s in contrazione",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Dorso",
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0605",
+    "nome": "Farmer's hold - presa stretta",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Tricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0606",
+    "nome": "Farmer's hold (2)",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0607",
+    "nome": "Wrist curl - presa stretta",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri",
+      "T-Bar row"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0608",
+    "nome": "Wrist curl - presa supina",
+    "muscoloTarget": "Avambracci",
+    "muscoliSecondari": [
+      "Dorso",
+      "Bicipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0609",
+    "nome": "Adduzioni alla macchina",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Macchina"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0610",
+    "nome": "Sumo squat",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0611",
+    "nome": "Affondi laterali",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Core",
+      "Glutei",
+      "Quadricipiti"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0612",
+    "nome": "Copenhagen plank",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0613",
+    "nome": "Cable adduction",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0614",
+    "nome": "Affondi laterali - con fermo - tempo 3-1-1",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Glutei",
+      "Quadricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0615",
+    "nome": "Sumo squat - stance stretto - alte ripetizioni",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere",
+      "Sled"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0616",
+    "nome": "Sumo squat - stance sumo - parziale (bottom) - tempo 3-1-1",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Quadricipiti"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0617",
+    "nome": "Sumo squat (2)",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Glutei",
+      "Quadricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Bilanciere"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0618",
+    "nome": "Affondi laterali - presa prona - split stance",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0619",
+    "nome": "Affondi laterali - presa media - stance stretto",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Manubri"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0620",
+    "nome": "Copenhagen plank - presa stretta - split stance - a ROM completo - pausa 1s in allungamento",
+    "muscoloTarget": "Adduttori",
+    "muscoliSecondari": [
+      "Glutei",
+      "Core",
+      "Quadricipiti"
+    ],
+    "materialeNecessario": [
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0621",
+    "nome": "Abduzioni alla macchina (2)",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Macchina"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0622",
+    "nome": "Monster walk con elastici",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0623",
+    "nome": "Side-lying hip abduction",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0624",
+    "nome": "Cable abduction",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Femorali",
+      "Glutei",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0625",
+    "nome": "Clamshell con elastici",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Elastici",
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0626",
+    "nome": "Monster walk con elastici - tempo 2-0-2 - isometrico",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Glutei",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Elastici",
+      "Step"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0627",
+    "nome": "Monster walk con elastici - split stance - parziale (top) - tempo 3-1-1 - cluster set",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Core",
+      "Femorali",
+      "Glutei"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0628",
+    "nome": "Abduzioni alla macchina - stance medio",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Glutei",
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Macchina",
+      "Rack"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0629",
+    "nome": "Abduzioni alla macchina - stance largo",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Macchina",
+      "Panca"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0630",
+    "nome": "Abduzioni alla macchina - pausa 2s in contrazione - alte ripetizioni",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Glutei",
+      "Femorali",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Macchina",
+      "Smith Machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0631",
+    "nome": "Abduzioni alla macchina (3)",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Femorali",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Macchina"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0632",
+    "nome": "Clamshell con elastici - tempo 2-0-2",
+    "muscoloTarget": "Abduttori",
+    "muscoliSecondari": [
+      "Femorali"
+    ],
+    "materialeNecessario": [
+      "Elastici",
+      "Tappetino"
+    ],
+    "difficolta": 3,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0633",
+    "nome": "Hanging knee raise",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Core",
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0634",
+    "nome": "Leg raise su parallele",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Core",
+      "Addome",
+      "Quadricipiti"
+    ],
+    "materialeNecessario": [
+      "Dip station"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0635",
+    "nome": "Marching bridge",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0636",
+    "nome": "Psoas raise ai cavi",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Cavi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0637",
+    "nome": "Step-up alto (knee drive)",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Addome",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Step"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0638",
+    "nome": "Hanging knee raise (2)",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0639",
+    "nome": "Hanging knee raise - presa a martello - split stance - bilaterale",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Addome",
+      "Quadricipiti",
+      "Core"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0640",
+    "nome": "Hanging knee raise - presa prona - unilaterale - isometrico",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0641",
+    "nome": "Hanging knee raise - presa media - split stance",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Quadricipiti",
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Sbarra trazioni"
+    ],
+    "difficolta": 4,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0642",
+    "nome": "Marching bridge - presa supina - stance medio - a ROM completo",
+    "muscoloTarget": "Flessori dell'anca",
+    "muscoliSecondari": [
+      "Core",
+      "Addome"
+    ],
+    "materialeNecessario": [
+      "Tappetino"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0643",
+    "nome": "Neck flexion (banda)",
+    "muscoloTarget": "Collo",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0644",
+    "nome": "Neck extension (banda)",
+    "muscoloTarget": "Collo",
+    "muscoliSecondari": [
+      "Spalle",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0645",
+    "nome": "Neck lateral flexion (banda)",
+    "muscoloTarget": "Collo",
+    "muscoliSecondari": [
+      "Spalle",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0646",
+    "nome": "Shrug isometrico (collo/trapezi)",
+    "muscoloTarget": "Collo",
+    "muscoliSecondari": [
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0647",
+    "nome": "Neck extension (banda) - presa supina - split stance",
+    "muscoloTarget": "Collo",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Elastici"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0648",
+    "nome": "Shrug isometrico (collo/trapezi) - split stance",
+    "muscoloTarget": "Collo",
+    "muscoliSecondari": [
+      "Trapezi",
+      "Spalle"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi",
+      "Shoulder press machine"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0649",
+    "nome": "Shrug isometrico (collo/trapezi) - presa supina",
+    "muscoloTarget": "Collo",
+    "muscoliSecondari": [
+      "Spalle",
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  },
+  {
+    "id": "EX0650",
+    "nome": "Shrug isometrico (collo/trapezi) - presa stretta - stance largo - a ROM completo",
+    "muscoloTarget": "Collo",
+    "muscoliSecondari": [
+      "Trapezi"
+    ],
+    "materialeNecessario": [
+      "Pesi liberi",
+      "Pec deck"
+    ],
+    "difficolta": 2,
+    "videoUrl": ""
+  }
+]

@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
+import 'dart:convert';
 
 import '../../../app/localization/app_localizations.dart';
 import '../../../app/router/route_paths.dart';
 import '../data/datasources/meal_local_data_source.dart';
+import '../data/datasources/workout_plan_local_data_source.dart';
 import '../domain/entities/meal_models.dart';
+import '../domain/entities/workout_models.dart';
 import 'meal_detail_screen.dart';
+import 'workout_selection_screen.dart';
+import '../../profile/presentation/profile_screen.dart';
 
 class ClientHomeScreen extends StatefulWidget {
   const ClientHomeScreen({super.key});
@@ -19,12 +24,18 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
   DateTime _selectedDate = DateTime.now();
   int _selectedTabIndex = 1;
   final MealLocalDataSource _mealDataSource = MealLocalDataSource.instance;
+  final WorkoutPlanLocalDataSource _planDataSource =
+      WorkoutPlanLocalDataSource.instance;
   final List<_Meal> _meals = [];
+  WorkoutPlan? _currentPlan;
+  List<PlanWorkout> _currentPlanWorkouts = [];
+  PlanWorkout? _selectedWorkout;
 
   @override
   void initState() {
     super.initState();
     _loadMealsForDate();
+    _loadCurrentPlan();
   }
 
   @override
@@ -42,9 +53,11 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         DateFormat.yMMMMEEEEd(localeName).format(_selectedDate);
     final numberFormatter = NumberFormat.decimalPattern(localeName);
 
+    final isProfile = _selectedTabIndex == 2;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.clientHome),
+        title: Text(isProfile ? 'Profilo' : l10n.clientHome),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -55,8 +68,10 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: ListView(
-            children: [
+          child: isProfile
+              ? const ProfileContent()
+              : ListView(
+                  children: [
               Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
@@ -232,7 +247,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Alimenti inseriti',
+                        'Alimentazione',
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium
@@ -367,7 +382,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                 ),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(16),
-                  onTap: () => context.pushNamed(RoutePaths.workoutName),
+                  onTap: _openWorkoutSelection,
                   child: Padding(
                     padding: const EdgeInsets.all(16),
                     child: Column(
@@ -391,6 +406,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                                 .withOpacity(0.35),
                           ),
                           child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
                                 width: 56,
@@ -413,15 +429,23 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Nessun allenamento pianificato per oggi',
+                                      _selectedWorkout != null
+                                          ? _selectedWorkout!.name
+                                          : 'Nessun workout selezionato',
                                       style: Theme.of(context)
                                           .textTheme
                                           .bodyLarge
-                                          ?.copyWith(fontWeight: FontWeight.w600),
+                                          ?.copyWith(
+                                            fontWeight: FontWeight.w700,
+                                          ),
                                     ),
                                     const SizedBox(height: 4),
                                     Text(
-                                      'Tocca per aggiungere o modificare la scheda.',
+                                      _currentPlan == null
+                                          ? 'Nessuna scheda corrente'
+                                          : _currentPlanWorkouts.isNotEmpty
+                                              ? 'Tocca per selezionare un workout'
+                                              : 'Nessun workout nella scheda corrente',
                                       style: Theme.of(context)
                                           .textTheme
                                           .bodyMedium
@@ -431,15 +455,26 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                                                 .onSurfaceVariant,
                                           ),
                                     ),
+                                    if (_selectedWorkout != null)
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(top: 8.0),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: _buildWorkoutExercises(
+                                            _selectedWorkout!,
+                                          ),
+                                        ),
+                                      ),
                                   ],
                                 ),
                               ),
-                              Icon(
-                                Icons.chevron_right_rounded,
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .onSurfaceVariant,
-                              ),
+                              if (_selectedWorkout != null)
+                                IconButton.filled(
+                                  onPressed: _openWorkoutSelection,
+                                  icon: const Icon(Icons.play_arrow),
+                                ),
                             ],
                           ),
                         ),
@@ -468,9 +503,9 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.help_outline),
-            activeIcon: Icon(Icons.help),
-            label: '?',
+            icon: Icon(Icons.person_outline),
+            activeIcon: Icon(Icons.person),
+            label: 'Profilo',
           ),
         ],
       ),
@@ -519,6 +554,142 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
     });
   }
 
+  Future<void> _openWorkoutSelection() async {
+    if (_currentPlan == null || _currentPlanWorkouts.isEmpty) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            'Nessuna scheda o workout disponibile. Gestisci dal profilo.',
+          ),
+        ),
+      );
+      return;
+    }
+
+    final selected = await Navigator.of(context).push<PlanWorkout>(
+      MaterialPageRoute(
+        builder: (_) => WorkoutSelectionScreen(
+          planName: _currentPlan!.name,
+          workouts: _currentPlanWorkouts,
+        ),
+      ),
+    );
+
+    if (selected != null) {
+      setState(() {
+        _selectedWorkout = selected;
+      });
+    }
+  }
+
+  Future<void> _loadCurrentPlan() async {
+    final plans = await _planDataSource.fetchPlans();
+    if (plans.isEmpty) {
+      setState(() {
+        _currentPlan = null;
+        _currentPlanWorkouts = [];
+        _selectedWorkout = null;
+      });
+      return;
+    }
+    final previousPlanId = _currentPlan?.id;
+    final previousWorkoutId = _selectedWorkout?.id;
+    var current = plans.firstWhere(
+      (p) => p.isCurrent,
+      orElse: () => plans.first,
+    );
+    if (!current.isCurrent) {
+      await _planDataSource.setCurrentPlan(current.id);
+      current = WorkoutPlan(
+        id: current.id,
+        name: current.name,
+        details: current.details,
+        isCurrent: true,
+      );
+    }
+    final workouts = await _planDataSource.fetchPlanWorkouts(current.id);
+    PlanWorkout? selected;
+    if (previousPlanId == current.id && previousWorkoutId != null) {
+      for (final w in workouts) {
+        if (w.id == previousWorkoutId) {
+          selected = w;
+          break;
+        }
+      }
+    }
+    setState(() {
+      _currentPlan = current;
+      _currentPlanWorkouts = workouts;
+      _selectedWorkout = selected;
+    });
+  }
+
+  void _openCurrentPlanWorkouts() {
+    if (_currentPlan != null) {
+      context
+          .pushNamed(
+        RoutePaths.workoutPlanDetailName,
+        pathParameters: {'planId': '${_currentPlan!.id}'},
+        extra: _currentPlan!.name,
+      )
+          .then((_) {
+        _loadCurrentPlan();
+      });
+    } else {
+      context.pushNamed(RoutePaths.workoutName).then((_) => _loadCurrentPlan());
+    }
+  }
+
+  List<Widget> _buildWorkoutExercises(PlanWorkout workout) {
+    final theme = Theme.of(context);
+    final textStyle = theme.textTheme.bodyMedium;
+    try {
+      final decoded = jsonDecode(workout.details);
+      if (decoded is List) {
+        final items = decoded.whereType<Map>().map((e) {
+          final name = (e['name'] ?? '').toString();
+          final sets = e['sets']?.toString();
+          final reps = e['reps']?.toString();
+          final notes = (e['notes'] ?? '').toString();
+          var line = name;
+          if (sets != null && reps != null && sets.isNotEmpty && reps.isNotEmpty) {
+            line += ' ${sets}x$reps';
+          }
+          if (notes.isNotEmpty) {
+            line += ' · $notes';
+          }
+          return line;
+        }).where((l) => l.trim().isNotEmpty).toList();
+        if (items.isNotEmpty) {
+          return items
+              .map((line) => Text('• $line', style: textStyle))
+              .toList();
+        }
+      }
+    } catch (_) {
+      // fallback
+    }
+    if (workout.details.isNotEmpty) {
+      final parts = workout.details
+          .split(',')
+          .map((e) => e.trim())
+          .where((e) => e.isNotEmpty)
+          .toList();
+      if (parts.isNotEmpty) {
+        return parts.map((p) => Text('• $p', style: textStyle)).toList();
+      }
+    }
+    return [
+      Text(
+        'Esercizi non disponibili',
+        style: textStyle?.copyWith(
+          color: theme.colorScheme.onSurfaceVariant,
+        ),
+      ),
+    ];
+  }
+
   Future<void> _loadMealsForDate() async {
     final entries = await _mealDataSource.fetchMealsForDate(_selectedDate);
     setState(() {
@@ -534,6 +705,12 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
           ),
         );
     });
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _loadCurrentPlan();
   }
 
   List<_Meal> _buildMealCards() {

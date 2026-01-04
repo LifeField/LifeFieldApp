@@ -17,3 +17,4 @@ class MealEntry {
   double get totalKcal =>
       foods.fold<double>(0, (prev, el) => prev + el.kcal);
 }
+  
