@@ -37,3 +37,25 @@ class PlanWorkout {
   final String name;
   final String details;
 }
+
+class PlanWorkoutExercise {
+  const PlanWorkoutExercise({
+    required this.id,
+    required this.workoutId,
+    required this.exerciseId,
+    required this.exerciseName,
+    required this.sets,
+    required this.reps,
+    this.notes,
+    this.videoUrl,
+  });
+
+  final int id;
+  final int workoutId;
+  final String exerciseId;
+  final String exerciseName;
+  final int sets;
+  final int reps;
+  final String? notes;
+  final String? videoUrl;
+}

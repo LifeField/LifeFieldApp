@@ -20,11 +20,16 @@ class ExerciseCatalogDataSource {
       _cache = [];
       return _cache!;
     }
-    _cache = raw.whereType<Map>().map(_mapEntry).where((ex) => ex.name.isNotEmpty).toList();
+    _cache = raw
+        .whereType<Map>()
+        .map(_mapEntry)
+        .where((ex) => ex.name.isNotEmpty)
+        .toList();
     return _cache!;
   }
 
   ExerciseCatalogEntry _mapEntry(Map item) {
+    final id = (item['id'] ?? item['codice'] ?? '').toString();
     final name = (item['name'] ?? item['nome'] ?? '').toString();
     final muscle = (item['muscle'] ?? item['muscoloTarget'] ?? '').toString();
 
@@ -44,15 +49,19 @@ class ExerciseCatalogDataSource {
       parts.add('Diff: $difficolta/5');
     }
     if (parts.isNotEmpty) {
-      notes = parts.join(' · ');
+      notes = parts.join(' | ');
     } else {
       notes = (item['notes'] ?? '').toString();
     }
 
+    final rawVideo = (item['videoUrl'] ?? '').toString();
+
     return ExerciseCatalogEntry(
+      id: id.isNotEmpty ? id : name,
       name: name,
       muscle: muscle.isNotEmpty ? muscle : null,
       notes: notes?.isNotEmpty == true ? notes : null,
+      videoUrl: rawVideo.isNotEmpty ? rawVideo : null,
     );
   }
 }

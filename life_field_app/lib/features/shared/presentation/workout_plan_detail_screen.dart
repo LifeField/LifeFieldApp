@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 
 import '../data/datasources/workout_plan_local_data_source.dart';
@@ -157,44 +156,29 @@ class _WorkoutPlanDetailScreenState extends State<WorkoutPlanDetailScreen> {
   }
 
   Future<void> _openExercises(PlanWorkout workout) async {
-    final result = await Navigator.of(context).push<String?>(
+    final modified = await Navigator.of(context).push<bool>(
       MaterialPageRoute(
         builder: (_) => WorkoutPlanExercisesScreen(
           workoutId: workout.id,
           workoutName: workout.name,
-          initialDetails: workout.details,
         ),
       ),
     );
-    if (result != null) {
-      await _dataSource.updatePlanWorkoutDetails(
-        workoutId: workout.id,
-        details: result,
-      );
+    if (modified == true) {
       await _loadWorkouts();
     }
   }
 
   Widget? _buildWorkoutSubtitle(PlanWorkout workout) {
-    if (workout.details.isEmpty) return null;
-    try {
-      final decoded = jsonDecode(workout.details);
-      if (decoded is List) {
-        final parts = decoded.whereType<Map>().map((e) {
-          final name = (e['name'] ?? '').toString();
-          final sets = e['sets']?.toString();
-          final reps = e['reps']?.toString();
-          if (name.isEmpty || sets == null || reps == null) return '';
-          return '$sets x $reps reps $name';
-        }).where((e) => e.isNotEmpty).toList();
-        if (parts.isNotEmpty) {
-          return Text(parts.join('\n'));
-        }
-      }
-    } catch (_) {
-      // ignore
+    if (workout.details.isNotEmpty) {
+      return Text(workout.details);
     }
-    return Text(workout.details);
+    return Text(
+      'Gestisci gli esercizi',
+      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
+          ),
+    );
   }
 
   Future<bool> _confirmDelete(BuildContext context, PlanWorkout workout) async {

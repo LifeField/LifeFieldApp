@@ -82,7 +82,7 @@ class _ExercisePickerScreenState extends State<ExercisePickerScreen> {
                               ? Text([
                                   if (ex.muscle?.isNotEmpty == true) ex.muscle!,
                                   if (ex.notes?.isNotEmpty == true) ex.notes!,
-                                ].join(' · '))
+                                ].join(' | '))
                               : null,
                           trailing: const Icon(Icons.chevron_right_rounded),
                           onTap: () => Navigator.of(context).pop(ex),

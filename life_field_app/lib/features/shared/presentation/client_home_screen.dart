@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
-import 'dart:convert';
 
 import '../../../app/localization/app_localizations.dart';
 import '../../../app/router/route_paths.dart';
@@ -30,6 +29,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
   WorkoutPlan? _currentPlan;
   List<PlanWorkout> _currentPlanWorkouts = [];
   PlanWorkout? _selectedWorkout;
+  List<PlanWorkoutExercise> _selectedWorkoutExercises = [];
 
   @override
   void initState() {
@@ -462,9 +462,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
-                                          children: _buildWorkoutExercises(
-                                            _selectedWorkout!,
-                                          ),
+                                          children: _buildWorkoutExercises(),
                                         ),
                                       ),
                                   ],
@@ -580,6 +578,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
       setState(() {
         _selectedWorkout = selected;
       });
+      await _loadSelectedWorkoutExercises(selected.id);
     }
   }
 
@@ -590,6 +589,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         _currentPlan = null;
         _currentPlanWorkouts = [];
         _selectedWorkout = null;
+        _selectedWorkoutExercises = [];
       });
       return;
     }
@@ -622,7 +622,11 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
       _currentPlan = current;
       _currentPlanWorkouts = workouts;
       _selectedWorkout = selected;
+      _selectedWorkoutExercises = [];
     });
+    if (selected != null) {
+      await _loadSelectedWorkoutExercises(selected.id);
+    }
   }
 
   void _openCurrentPlanWorkouts() {
@@ -641,53 +645,35 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
     }
   }
 
-  List<Widget> _buildWorkoutExercises(PlanWorkout workout) {
+  List<Widget> _buildWorkoutExercises() {
     final theme = Theme.of(context);
     final textStyle = theme.textTheme.bodyMedium;
-    try {
-      final decoded = jsonDecode(workout.details);
-      if (decoded is List) {
-        final items = decoded.whereType<Map>().map((e) {
-          final name = (e['name'] ?? '').toString();
-          final sets = e['sets']?.toString();
-          final reps = e['reps']?.toString();
-          final notes = (e['notes'] ?? '').toString();
-          var line = name;
-          if (sets != null && reps != null && sets.isNotEmpty && reps.isNotEmpty) {
-            line += ' ${sets}x$reps';
-          }
-          if (notes.isNotEmpty) {
-            line += ' · $notes';
-          }
-          return line;
-        }).where((l) => l.trim().isNotEmpty).toList();
-        if (items.isNotEmpty) {
-          return items
-              .map((line) => Text('• $line', style: textStyle))
-              .toList();
-        }
-      }
-    } catch (_) {
-      // fallback
-    }
-    if (workout.details.isNotEmpty) {
-      final parts = workout.details
-          .split(',')
-          .map((e) => e.trim())
-          .where((e) => e.isNotEmpty)
-          .toList();
-      if (parts.isNotEmpty) {
-        return parts.map((p) => Text('• $p', style: textStyle)).toList();
-      }
-    }
-    return [
-      Text(
-        'Esercizi non disponibili',
-        style: textStyle?.copyWith(
-          color: theme.colorScheme.onSurfaceVariant,
+    if (_selectedWorkoutExercises.isEmpty) {
+      return [
+        Text(
+          'Esercizi non disponibili',
+          style: textStyle?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
         ),
-      ),
-    ];
+      ];
+    }
+    return _selectedWorkoutExercises
+        .map(
+          (ex) => Text(
+            '- ${ex.exerciseName} ${ex.sets}x${ex.reps}',
+            style: textStyle,
+          ),
+        )
+        .toList();
+  }
+
+  Future<void> _loadSelectedWorkoutExercises(int workoutId) async {
+    final exercises = await _planDataSource.fetchExercises(workoutId);
+    if (!mounted) return;
+    setState(() {
+      _selectedWorkoutExercises = exercises;
+    });
   }
 
   Future<void> _loadMealsForDate() async {
@@ -744,3 +730,4 @@ class _Meal {
   final double totalCalories;
   final bool isPlaceholder;
 }
+

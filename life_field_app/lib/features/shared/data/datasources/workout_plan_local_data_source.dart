@@ -1,5 +1,6 @@
-import 'workout_local_data_source.dart';
+import '../../domain/entities/exercise_catalog_entry.dart';
 import '../../domain/entities/workout_models.dart';
+import 'workout_local_data_source.dart';
 
 class WorkoutPlanLocalDataSource {
   WorkoutPlanLocalDataSource._();
@@ -115,6 +116,75 @@ class WorkoutPlanLocalDataSource {
       {'details': details},
       where: 'id = ?',
       whereArgs: [workoutId],
+    );
+  }
+
+  Future<List<PlanWorkoutExercise>> fetchExercises(int workoutId) async {
+    final db = await _base.database();
+    final rows = await db.query(
+      'plan_workout_exercises',
+      where: 'workout_id = ?',
+      whereArgs: [workoutId],
+      orderBy: 'id DESC',
+    );
+    return rows
+        .map(
+          (row) => PlanWorkoutExercise(
+            id: row['id'] as int,
+            workoutId: row['workout_id'] as int,
+            exerciseId: (row['exercise_id'] ?? '').toString(),
+            exerciseName: (row['exercise_name'] ?? '').toString(),
+            sets: (row['sets'] as int?) ?? 0,
+            reps: (row['reps'] as int?) ?? 0,
+            notes: (row['notes'] as String?)?.isNotEmpty == true
+                ? row['notes'] as String
+                : null,
+            videoUrl: (row['video_url'] as String?)?.isNotEmpty == true
+                ? row['video_url'] as String
+                : null,
+          ),
+        )
+        .toList();
+  }
+
+  Future<PlanWorkoutExercise> addExercise({
+    required int workoutId,
+    required ExerciseCatalogEntry exercise,
+    required int sets,
+    required int reps,
+    String? notes,
+  }) async {
+    final db = await _base.database();
+    final id = await db.insert(
+      'plan_workout_exercises',
+      {
+        'workout_id': workoutId,
+        'exercise_id': exercise.id,
+        'exercise_name': exercise.name,
+        'sets': sets,
+        'reps': reps,
+        'notes': notes ?? '',
+        'video_url': exercise.videoUrl ?? '',
+      },
+    );
+    return PlanWorkoutExercise(
+      id: id,
+      workoutId: workoutId,
+      exerciseId: exercise.id,
+      exerciseName: exercise.name,
+      sets: sets,
+      reps: reps,
+      notes: notes,
+      videoUrl: exercise.videoUrl,
+    );
+  }
+
+  Future<void> deleteExercise(int id) async {
+    final db = await _base.database();
+    await db.delete(
+      'plan_workout_exercises',
+      where: 'id = ?',
+      whereArgs: [id],
     );
   }
 

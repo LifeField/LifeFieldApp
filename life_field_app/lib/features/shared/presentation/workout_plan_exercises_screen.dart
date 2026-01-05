@@ -1,95 +1,121 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import '../domain/entities/exercise_catalog_entry.dart';
-import 'exercise_picker_screen.dart';
+
 import '../data/datasources/workout_plan_local_data_source.dart';
+import '../domain/entities/exercise_catalog_entry.dart';
+import '../domain/entities/workout_models.dart';
+import 'exercise_picker_screen.dart';
 
 class WorkoutPlanExercisesScreen extends StatefulWidget {
   const WorkoutPlanExercisesScreen({
     super.key,
     required this.workoutId,
     required this.workoutName,
-    required this.initialDetails,
   });
 
   final int workoutId;
   final String workoutName;
-  final String initialDetails;
 
   @override
-  State<WorkoutPlanExercisesScreen> createState() => _WorkoutPlanExercisesScreenState();
+  State<WorkoutPlanExercisesScreen> createState() =>
+      _WorkoutPlanExercisesScreenState();
 }
 
-class _WorkoutPlanExercisesScreenState extends State<WorkoutPlanExercisesScreen> {
-  final WorkoutPlanLocalDataSource _dataSource = WorkoutPlanLocalDataSource.instance;
-  final List<_ExerciseEntry> _exercises = [];
+class _WorkoutPlanExercisesScreenState
+    extends State<WorkoutPlanExercisesScreen> {
+  final WorkoutPlanLocalDataSource _dataSource =
+      WorkoutPlanLocalDataSource.instance;
+  final List<PlanWorkoutExercise> _exercises = [];
+  bool _modified = false;
+  bool _loading = true;
 
   @override
   void initState() {
     super.initState();
-    _loadInitial();
+    _loadExercises();
   }
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        await _saveAndPop();
+        _finish();
         return false;
       },
       child: Scaffold(
         appBar: AppBar(
           title: Text(widget.workoutName),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.check),
-              onPressed: _saveAndPop,
-            ),
-          ],
+          leading: IconButton(
+            icon: const Icon(Icons.close),
+            onPressed: _finish,
+          ),
         ),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(16),
-            child: ListView.separated(
-              itemCount: _exercises.length + 1,
-              separatorBuilder: (_, __) => const SizedBox(height: 12),
-              itemBuilder: (context, index) {
-                if (index == _exercises.length) {
-                  return _AddExerciseCard(onTap: _showAddExerciseDialog);
-                }
-                final ex = _exercises[index];
-                return Dismissible(
-                  key: ValueKey('exercise-${ex.name}-$index'),
-                  background: _buildDeleteBackground(context),
-                  direction: DismissDirection.endToStart,
-                  confirmDismiss: (direction) => _confirmDelete(context, ex),
-                  onDismissed: (_) => setState(() => _exercises.removeAt(index)),
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: ListTile(
-                      leading: const Icon(Icons.fitness_center_outlined),
-                      title: Text(ex.name),
-                      subtitle: Text(
-                        '${ex.sets}x${ex.reps}${ex.notes.isNotEmpty ? ' ${ex.notes}' : ''}',
-                      ),
-                    ),
+            child: _loading
+                ? const Center(child: CircularProgressIndicator())
+                : ListView.separated(
+                    itemCount: _exercises.length + 1,
+                    separatorBuilder: (_, __) => const SizedBox(height: 12),
+                    itemBuilder: (context, index) {
+                      if (index == _exercises.length) {
+                        return _AddExerciseCard(onTap: _showAddExerciseDialog);
+                      }
+                      final ex = _exercises[index];
+                      return Dismissible(
+                        key: ValueKey('exercise-${ex.id}'),
+                        background: _buildNeutralBackground(context),
+                        secondaryBackground: _buildDeleteBackground(context),
+                        direction: DismissDirection.endToStart,
+                        confirmDismiss: (_) => _confirmDelete(context, ex),
+                        onDismissed: (_) => _deleteExercise(ex),
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: ListTile(
+                            leading: const Icon(Icons.fitness_center_outlined),
+                            title: Text(ex.exerciseName),
+                            subtitle: Padding(
+                              padding: const EdgeInsets.only(top: 4),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Serie: ${ex.sets}'),
+                                  Text('Ripetizioni: ${ex.reps}'),
+                                  if (ex.notes != null &&
+                                      ex.notes!.trim().isNotEmpty)
+                                    Text(ex.notes!),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
-            ),
           ),
         ),
       ),
     );
   }
 
+  Future<void> _loadExercises() async {
+    final items = await _dataSource.fetchExercises(widget.workoutId);
+    if (!mounted) return;
+    setState(() {
+      _exercises
+        ..clear()
+        ..addAll(items);
+      _loading = false;
+    });
+  }
+
   Future<void> _showAddExerciseDialog() async {
     final picked = await Navigator.of(context).push<ExerciseCatalogEntry?>(
       MaterialPageRoute(builder: (_) => const ExercisePickerScreen()),
     );
-    if (picked == null) return;
+    if (picked == null || !mounted) return;
 
     final setsController = TextEditingController();
     final repsController = TextEditingController();
@@ -142,27 +168,28 @@ class _WorkoutPlanExercisesScreenState extends State<WorkoutPlanExercisesScreen>
 
     final sets = int.tryParse(setsController.text.trim());
     final reps = int.tryParse(repsController.text.trim());
-
-    if (ok == true && sets != null && reps != null) {
+    if (ok == true && sets != null && reps != null && mounted) {
+      final created = await _dataSource.addExercise(
+        workoutId: widget.workoutId,
+        exercise: picked,
+        sets: sets,
+        reps: reps,
+        notes: notesController.text.trim(),
+      );
       setState(() {
-        _exercises.add(
-          _ExerciseEntry(
-            name: picked.name,
-            notes: notesController.text.trim(),
-            sets: sets,
-            reps: reps,
-          ),
-        );
+        _modified = true;
+        _exercises.insert(0, created);
       });
     }
   }
 
-  Future<bool> _confirmDelete(BuildContext context, _ExerciseEntry ex) async {
+  Future<bool> _confirmDelete(
+      BuildContext context, PlanWorkoutExercise ex) async {
     final result = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Elimina esercizio'),
-        content: Text('Vuoi eliminare "${ex.name}"?'),
+        content: Text('Vuoi eliminare "${ex.exerciseName}"?'),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
@@ -176,6 +203,15 @@ class _WorkoutPlanExercisesScreenState extends State<WorkoutPlanExercisesScreen>
       ),
     );
     return result ?? false;
+  }
+
+  Future<void> _deleteExercise(PlanWorkoutExercise ex) async {
+    await _dataSource.deleteExercise(ex.id);
+    if (!mounted) return;
+    setState(() {
+      _modified = true;
+      _exercises.removeWhere((e) => e.id == ex.id);
+    });
   }
 
   Widget _buildDeleteBackground(BuildContext context) {
@@ -197,60 +233,19 @@ class _WorkoutPlanExercisesScreenState extends State<WorkoutPlanExercisesScreen>
     );
   }
 
-  Future<void> _loadInitial() async {
-    if (widget.initialDetails.isEmpty) return;
-    try {
-      final decoded = jsonDecode(widget.initialDetails);
-      if (decoded is List) {
-        for (final item in decoded.whereType<Map>()) {
-          final name = (item['name'] ?? '').toString();
-          if (name.isEmpty) continue;
-          final sets = int.tryParse(item['sets']?.toString() ?? '') ?? 0;
-          final reps = int.tryParse(item['reps']?.toString() ?? '') ?? 0;
-          final notes = (item['notes'] ?? '').toString();
-          _exercises.add(
-            _ExerciseEntry(name: name, notes: notes, sets: sets, reps: reps),
-          );
-        }
-        setState(() {});
-      }
-    } catch (_) {
-      // ignore malformed
-    }
+  Widget _buildNeutralBackground(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.surfaceVariant.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(12),
+      ),
+    );
   }
 
-  Future<void> _saveAndPop() async {
-    final serialized = jsonEncode(
-      _exercises
-          .map((e) => {
-                'name': e.name,
-                'sets': e.sets,
-                'reps': e.reps,
-                'notes': e.notes,
-              })
-          .toList(),
-    );
-    await _dataSource.updatePlanWorkoutDetails(
-      workoutId: widget.workoutId,
-      details: serialized,
-    );
+  void _finish() {
     if (!mounted) return;
-    Navigator.of(context).pop(serialized);
+    Navigator.of(context).pop(_modified);
   }
-}
-
-class _ExerciseEntry {
-  _ExerciseEntry({
-    required this.name,
-    this.notes = '',
-    required this.sets,
-    required this.reps,
-  });
-
-  final String name;
-  final String notes;
-  final int sets;
-  final int reps;
 }
 
 class _AddExerciseCard extends StatelessWidget {
@@ -276,8 +271,7 @@ class _AddExerciseCard extends StatelessWidget {
                 height: 56,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color:
-                      Theme.of(context).colorScheme.primary.withOpacity(0.08),
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.08),
                 ),
                 child: Icon(
                   Icons.add,
