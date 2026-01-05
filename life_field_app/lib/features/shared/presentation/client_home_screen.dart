@@ -550,9 +550,15 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
     setState(() {
       _selectedTabIndex = index;
     });
+    if (index == 1) {
+      // Ricarica i dati workout quando si torna in Home.
+      _loadCurrentPlan();
+    }
   }
 
   Future<void> _openWorkoutSelection() async {
+    // Sincronizza i dati nel caso siano cambiati tornando da altre schermate.
+    await _loadCurrentPlan();
     if (_currentPlan == null || _currentPlanWorkouts.isEmpty) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
@@ -641,7 +647,9 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         _loadCurrentPlan();
       });
     } else {
-      context.pushNamed(RoutePaths.workoutName).then((_) => _loadCurrentPlan());
+      context
+          .pushNamed(RoutePaths.workoutName)
+          .then((_) => _loadCurrentPlan());
     }
   }
 
