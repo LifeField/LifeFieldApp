@@ -48,6 +48,7 @@ class PlanWorkoutExercise {
     required this.reps,
     this.notes,
     this.videoUrl,
+    this.setDetails = const [],
   });
 
   final int id;
@@ -58,4 +59,37 @@ class PlanWorkoutExercise {
   final int reps;
   final String? notes;
   final String? videoUrl;
+  final List<ExerciseSetDetail> setDetails;
+
+  PlanWorkoutExercise copyWith({
+    int? sets,
+    int? reps,
+    String? notes,
+    String? videoUrl,
+    List<ExerciseSetDetail>? setDetails,
+  }) {
+    return PlanWorkoutExercise(
+      id: id,
+      workoutId: workoutId,
+      exerciseId: exerciseId,
+      exerciseName: exerciseName,
+      sets: sets ?? this.sets,
+      reps: reps ?? this.reps,
+      notes: notes ?? this.notes,
+      videoUrl: videoUrl ?? this.videoUrl,
+      setDetails: setDetails ?? this.setDetails,
+    );
+  }
+}
+
+class ExerciseSetDetail {
+  const ExerciseSetDetail({
+    required this.setNumber,
+    this.weight,
+    this.reps,
+  });
+
+  final int setNumber;
+  final String? weight;
+  final String? reps;
 }

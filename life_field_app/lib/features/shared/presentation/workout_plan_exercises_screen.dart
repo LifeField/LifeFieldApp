@@ -38,7 +38,7 @@ class _WorkoutPlanExercisesScreenState
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        _finish();
+        await _saveAndFinish();
         return false;
       },
       child: Scaffold(
@@ -46,8 +46,14 @@ class _WorkoutPlanExercisesScreenState
           title: Text(widget.workoutName),
           leading: IconButton(
             icon: const Icon(Icons.close),
-            onPressed: _finish,
+            onPressed: _saveAndFinish,
           ),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.check),
+              onPressed: _saveAndFinish,
+            ),
+          ],
         ),
         body: SafeArea(
           child: Padding(
@@ -76,18 +82,14 @@ class _WorkoutPlanExercisesScreenState
                           child: ListTile(
                             leading: const Icon(Icons.fitness_center_outlined),
                             title: Text(ex.exerciseName),
-                            subtitle: Padding(
-                              padding: const EdgeInsets.only(top: 4),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Serie: ${ex.sets}'),
-                                  Text('Ripetizioni: ${ex.reps}'),
-                                  if (ex.notes != null &&
-                                      ex.notes!.trim().isNotEmpty)
-                                    Text(ex.notes!),
-                                ],
-                              ),
+                            subtitle: _ExerciseSetsTable(
+                              exercise: ex,
+                              onChanged: (updated) {
+                                setState(() {
+                                  _modified = true;
+                                  _exercises[index] = updated;
+                                });
+                              },
                             ),
                           ),
                         ),
@@ -116,71 +118,15 @@ class _WorkoutPlanExercisesScreenState
       MaterialPageRoute(builder: (_) => const ExercisePickerScreen()),
     );
     if (picked == null || !mounted) return;
-
-    final setsController = TextEditingController();
-    final repsController = TextEditingController();
-    final notesController = TextEditingController();
-
-    final ok = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text('Configura "${picked.name}"'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            TextField(
-              controller: setsController,
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(labelText: 'Serie'),
-            ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: repsController,
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(labelText: 'Ripetizioni'),
-            ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: notesController,
-              decoration: const InputDecoration(labelText: 'Note (opzionale)'),
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: const Text('Annulla'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              final sets = int.tryParse(setsController.text.trim());
-              final reps = int.tryParse(repsController.text.trim());
-              if (sets == null || reps == null || sets <= 0 || reps <= 0) {
-                return;
-              }
-              Navigator.of(context).pop(true);
-            },
-            child: const Text('Salva'),
-          ),
-        ],
-      ),
+    final created = await _dataSource.addExercise(
+      workoutId: widget.workoutId,
+      exercise: picked,
+      setDetails: const [ExerciseSetDetail(setNumber: 1)],
     );
-
-    final sets = int.tryParse(setsController.text.trim());
-    final reps = int.tryParse(repsController.text.trim());
-    if (ok == true && sets != null && reps != null && mounted) {
-      final created = await _dataSource.addExercise(
-        workoutId: widget.workoutId,
-        exercise: picked,
-        sets: sets,
-        reps: reps,
-        notes: notesController.text.trim(),
-      );
-      setState(() {
-        _modified = true;
-        _exercises.insert(0, created);
-      });
-    }
+    setState(() {
+      _modified = true;
+      _exercises.insert(0, created);
+    });
   }
 
   Future<bool> _confirmDelete(
@@ -242,9 +188,135 @@ class _WorkoutPlanExercisesScreenState
     );
   }
 
-  void _finish() {
+  Future<void> _saveAndFinish() async {
+    if (!mounted) return;
+    for (final ex in _exercises) {
+      await _dataSource.updateExerciseSets(
+        exerciseId: ex.id,
+        setDetails: ex.setDetails.isNotEmpty
+            ? ex.setDetails
+            : [const ExerciseSetDetail(setNumber: 1)],
+      );
+    }
     if (!mounted) return;
     Navigator.of(context).pop(_modified);
+  }
+}
+
+class _ExerciseSetsTable extends StatelessWidget {
+  const _ExerciseSetsTable({
+    required this.exercise,
+    required this.onChanged,
+  });
+
+  final PlanWorkoutExercise exercise;
+  final ValueChanged<PlanWorkoutExercise> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final rows = exercise.setDetails.isNotEmpty
+        ? exercise.setDetails
+        : [const ExerciseSetDetail(setNumber: 1)];
+    return Padding(
+      padding: const EdgeInsets.only(top: 8, bottom: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Serie',
+                style: Theme.of(context).textTheme.labelLarge,
+              ),
+              TextButton.icon(
+                onPressed: () {
+                  final next = rows.length + 1;
+                  final updated = List<ExerciseSetDetail>.from(rows)
+                    ..add(ExerciseSetDetail(setNumber: next));
+                  _emitUpdated(updated);
+                },
+                icon: const Icon(Icons.add),
+                label: const Text('Aggiungi serie'),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Column(
+            children: rows.map((set) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 4),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 60,
+                      child: Text(
+                        'Serie ${set.setNumber}',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: TextFormField(
+                        key: ValueKey('weight-${exercise.id}-${set.setNumber}'),
+                        initialValue: set.weight ?? '',
+                        decoration:
+                            const InputDecoration(labelText: 'Peso (kg)'),
+                        keyboardType:
+                            const TextInputType.numberWithOptions(decimal: true),
+                        onChanged: (value) {
+                          _updateSet(set.setNumber, value, null);
+                        },
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: TextFormField(
+                        key: ValueKey('reps-${exercise.id}-${set.setNumber}'),
+                        initialValue: set.reps ?? '',
+                        decoration:
+                            const InputDecoration(labelText: 'Ripetizioni'),
+                        keyboardType: TextInputType.number,
+                        onChanged: (value) {
+                          _updateSet(set.setNumber, null, value);
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }).toList(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _updateSet(int setNumber, String? weight, String? reps) {
+    final updated = exercise.setDetails.isNotEmpty
+        ? List<ExerciseSetDetail>.from(exercise.setDetails)
+        : [const ExerciseSetDetail(setNumber: 1)];
+    final index = updated.indexWhere((s) => s.setNumber == setNumber);
+    if (index == -1) return;
+    final current = updated[index];
+    updated[index] = ExerciseSetDetail(
+      setNumber: current.setNumber,
+      weight: weight ?? current.weight,
+      reps: reps ?? current.reps,
+    );
+    _emitUpdated(updated);
+  }
+
+  void _emitUpdated(List<ExerciseSetDetail> updated) {
+    final repsValue =
+        updated.isNotEmpty ? int.tryParse(updated.first.reps ?? '') ?? 0 : 0;
+    onChanged(
+      exercise.copyWith(
+        setDetails: updated,
+        sets: updated.length,
+        reps: repsValue,
+      ),
+    );
   }
 }
 

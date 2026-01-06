@@ -16,7 +16,7 @@ class WorkoutLocalDataSource {
     final path = join(dbPath, 'life_field_workouts.db');
     _db = await openDatabase(
       path,
-      version: 4,
+      version: 5,
       onConfigure: (db) async {
         await db.execute('PRAGMA foreign_keys = ON');
       },
@@ -34,6 +34,11 @@ class WorkoutLocalDataSource {
         }
         if (oldVersion < 4) {
           await _createExerciseTable(db);
+        }
+        if (oldVersion < 5) {
+          await db.execute(
+            'ALTER TABLE plan_workout_exercises ADD COLUMN sets_payload TEXT NOT NULL DEFAULT ""',
+          );
         }
       },
     );
@@ -83,6 +88,7 @@ class WorkoutLocalDataSource {
           reps INTEGER NOT NULL,
           notes TEXT,
           video_url TEXT,
+          sets_payload TEXT NOT NULL DEFAULT '',
           FOREIGN KEY(workout_id) REFERENCES plan_workouts(id) ON DELETE CASCADE
         );
         ''');
