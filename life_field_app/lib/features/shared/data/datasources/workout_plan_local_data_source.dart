@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import '../../domain/entities/exercise_catalog_entry.dart';
 import '../../domain/entities/workout_models.dart';
 import 'workout_local_data_source.dart';
@@ -119,42 +121,98 @@ class WorkoutPlanLocalDataSource {
     );
   }
 
+  List<ExerciseSetDetail> _decodeSets(String payload, int fallbackCount) {
+    if (payload.isEmpty) {
+      if (fallbackCount <= 0) return [];
+      return List.generate(
+        fallbackCount,
+        (index) => ExerciseSetDetail(setNumber: index + 1),
+      );
+    }
+    try {
+      final raw = jsonDecode(payload);
+      if (raw is List) {
+        return raw.whereType<Map>().map((item) {
+          final setNumber = int.tryParse('${item['set'] ?? item['setNumber'] ?? ''}') ?? 0;
+          final weight = (item['weight'] ?? '').toString();
+          final reps = (item['reps'] ?? '').toString();
+          return ExerciseSetDetail(
+            setNumber: setNumber > 0 ? setNumber : 0,
+            weight: weight.isNotEmpty ? weight : null,
+            reps: reps.isNotEmpty ? reps : null,
+          );
+        }).where((e) => e.setNumber > 0).toList();
+      }
+    } catch (_) {
+      // ignore malformed payloads
+    }
+    return [];
+  }
+
+  String _encodeSets(List<ExerciseSetDetail> details) {
+    return jsonEncode(details
+        .map(
+          (e) => {
+            'set': e.setNumber,
+            'weight': e.weight ?? '',
+            'reps': e.reps ?? '',
+          },
+        )
+        .toList());
+  }
+
   Future<List<PlanWorkoutExercise>> fetchExercises(int workoutId) async {
     final db = await _base.database();
     final rows = await db.query(
       'plan_workout_exercises',
       where: 'workout_id = ?',
       whereArgs: [workoutId],
-      orderBy: 'id DESC',
+      orderBy: 'id ASC',
     );
-    return rows
-        .map(
-          (row) => PlanWorkoutExercise(
-            id: row['id'] as int,
-            workoutId: row['workout_id'] as int,
-            exerciseId: (row['exercise_id'] ?? '').toString(),
-            exerciseName: (row['exercise_name'] ?? '').toString(),
-            sets: (row['sets'] as int?) ?? 0,
-            reps: (row['reps'] as int?) ?? 0,
-            notes: (row['notes'] as String?)?.isNotEmpty == true
-                ? row['notes'] as String
-                : null,
-            videoUrl: (row['video_url'] as String?)?.isNotEmpty == true
-                ? row['video_url'] as String
-                : null,
-          ),
-        )
-        .toList();
+    return rows.map((row) {
+      final sets = (row['sets'] as int?) ?? 0;
+      final decoded = _decodeSets(
+        (row['sets_payload'] ?? '').toString(),
+        sets,
+      );
+      final safeDetails = decoded.isNotEmpty
+          ? decoded
+          : List.generate(
+              sets > 0 ? sets : 1,
+              (index) => ExerciseSetDetail(setNumber: index + 1),
+            );
+      return PlanWorkoutExercise(
+        id: row['id'] as int,
+        workoutId: row['workout_id'] as int,
+        exerciseId: (row['exercise_id'] ?? '').toString(),
+        exerciseName: (row['exercise_name'] ?? '').toString(),
+        sets: sets,
+        reps: (row['reps'] as int?) ?? 0,
+        notes: (row['notes'] as String?)?.isNotEmpty == true
+            ? row['notes'] as String
+            : null,
+        videoUrl: (row['video_url'] as String?)?.isNotEmpty == true
+            ? row['video_url'] as String
+            : null,
+        setDetails: safeDetails,
+      );
+    }).toList();
   }
 
   Future<PlanWorkoutExercise> addExercise({
     required int workoutId,
     required ExerciseCatalogEntry exercise,
-    required int sets,
-    required int reps,
+    List<ExerciseSetDetail>? setDetails,
     String? notes,
   }) async {
     final db = await _base.database();
+    final details = setDetails ??
+        [
+          const ExerciseSetDetail(setNumber: 1),
+        ];
+    final sets = details.length;
+    final firstReps = details.first.reps;
+    final reps = int.tryParse(firstReps ?? '') ?? 0;
     final id = await db.insert(
       'plan_workout_exercises',
       {
@@ -165,6 +223,7 @@ class WorkoutPlanLocalDataSource {
         'reps': reps,
         'notes': notes ?? '',
         'video_url': exercise.videoUrl ?? '',
+        'sets_payload': _encodeSets(details),
       },
     );
     return PlanWorkoutExercise(
@@ -176,6 +235,7 @@ class WorkoutPlanLocalDataSource {
       reps: reps,
       notes: notes,
       videoUrl: exercise.videoUrl,
+      setDetails: details,
     );
   }
 
@@ -185,6 +245,42 @@ class WorkoutPlanLocalDataSource {
       'plan_workout_exercises',
       where: 'id = ?',
       whereArgs: [id],
+    );
+  }
+
+  Future<void> updateExerciseSets({
+    required int exerciseId,
+    required List<ExerciseSetDetail> setDetails,
+    String? notes,
+  }) async {
+    final db = await _base.database();
+    final normalized = List<ExerciseSetDetail>.generate(
+      setDetails.isNotEmpty ? setDetails.length : 1,
+      (index) {
+        final source = setDetails.isNotEmpty && setDetails.length > index
+            ? setDetails[index]
+            : const ExerciseSetDetail(setNumber: 1);
+        return ExerciseSetDetail(
+          setNumber: index + 1,
+          weight: source.weight,
+          reps: source.reps,
+        );
+      },
+    );
+    final sets = normalized.length;
+    final reps = normalized.isNotEmpty
+        ? int.tryParse(normalized.first.reps ?? '') ?? 0
+        : 0;
+    await db.update(
+      'plan_workout_exercises',
+      {
+        'sets': sets,
+        'reps': reps,
+        'sets_payload': _encodeSets(normalized),
+        'notes': notes ?? '',
+      },
+      where: 'id = ?',
+      whereArgs: [exerciseId],
     );
   }
 

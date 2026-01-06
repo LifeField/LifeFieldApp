@@ -79,17 +79,64 @@ class _WorkoutPlanExercisesScreenState
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: ListTile(
-                            leading: const Icon(Icons.fitness_center_outlined),
-                            title: Text(ex.exerciseName),
-                            subtitle: _ExerciseSetsTable(
-                              exercise: ex,
-                              onChanged: (updated) {
-                                setState(() {
-                                  _modified = true;
-                                  _exercises[index] = updated;
-                                });
-                              },
+                          child: Padding(
+                            padding: const EdgeInsets.all(12),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(Icons.fitness_center_outlined),
+                                    const SizedBox(width: 8),
+                                    Expanded(
+                                      child: Text(
+                                        ex.exerciseName,
+                                        textAlign: TextAlign.center,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleMedium
+                                            ?.copyWith(fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 8),
+                                TextFormField(
+                                  initialValue: ex.notes ?? '',
+                                  decoration: const InputDecoration(
+                                    hintText: 'Note esercizio',
+                                    isDense: true,
+                                    border: InputBorder.none,
+                                    enabledBorder: InputBorder.none,
+                                    focusedBorder: InputBorder.none,
+                                  ),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodySmall
+                                      ?.copyWith(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSurfaceVariant,
+                                      ),
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _modified = true;
+                                      _exercises[index] =
+                                          ex.copyWith(notes: value.trim());
+                                    });
+                                  },
+                                ),
+                                _ExerciseSetsTable(
+                                  exercise: ex,
+                                  onChanged: (updated) {
+                                    setState(() {
+                                      _modified = true;
+                                      _exercises[index] = updated;
+                                    });
+                                  },
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -125,7 +172,7 @@ class _WorkoutPlanExercisesScreenState
     );
     setState(() {
       _modified = true;
-      _exercises.insert(0, created);
+      _exercises.add(created);
     });
   }
 
@@ -196,6 +243,7 @@ class _WorkoutPlanExercisesScreenState
         setDetails: ex.setDetails.isNotEmpty
             ? ex.setDetails
             : [const ExerciseSetDetail(setNumber: 1)],
+        notes: ex.notes,
       );
     }
     if (!mounted) return;
@@ -219,25 +267,47 @@ class _ExerciseSetsTable extends StatelessWidget {
         : [const ExerciseSetDetail(setNumber: 1)];
     return Padding(
       padding: const EdgeInsets.only(top: 8, bottom: 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+          const SizedBox(height: 12),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Serie',
-                style: Theme.of(context).textTheme.labelLarge,
+              SizedBox(
+                width: 60,
+                child: Center(
+                  child: Text(
+                    'Serie',
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelSmall
+                        ?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                ),
               ),
-              TextButton.icon(
-                onPressed: () {
-                  final next = rows.length + 1;
-                  final updated = List<ExerciseSetDetail>.from(rows)
-                    ..add(ExerciseSetDetail(setNumber: next));
-                  _emitUpdated(updated);
-                },
-                icon: const Icon(Icons.add),
-                label: const Text('Aggiungi serie'),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'Peso (kg)',
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelSmall
+                        ?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'Ripetizioni',
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelSmall
+                        ?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                ),
               ),
             ],
           ),
@@ -250,9 +320,11 @@ class _ExerciseSetsTable extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: 60,
-                      child: Text(
-                        'Serie ${set.setNumber}',
-                        style: Theme.of(context).textTheme.bodyMedium,
+                      child: Center(
+                        child: Text(
+                          '${set.setNumber}',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
                       ),
                     ),
                     const SizedBox(width: 12),
@@ -260,10 +332,16 @@ class _ExerciseSetsTable extends StatelessWidget {
                       child: TextFormField(
                         key: ValueKey('weight-${exercise.id}-${set.setNumber}'),
                         initialValue: set.weight ?? '',
-                        decoration:
-                            const InputDecoration(labelText: 'Peso (kg)'),
+                        decoration: const InputDecoration(
+                          hintText: '—',
+                          isDense: true,
+                          border: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                        ),
                         keyboardType:
                             const TextInputType.numberWithOptions(decimal: true),
+                        textAlign: TextAlign.center,
                         onChanged: (value) {
                           _updateSet(set.setNumber, value, null);
                         },
@@ -274,9 +352,15 @@ class _ExerciseSetsTable extends StatelessWidget {
                       child: TextFormField(
                         key: ValueKey('reps-${exercise.id}-${set.setNumber}'),
                         initialValue: set.reps ?? '',
-                        decoration:
-                            const InputDecoration(labelText: 'Ripetizioni'),
+                        decoration: const InputDecoration(
+                          hintText: '—',
+                          isDense: true,
+                          border: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                        ),
                         keyboardType: TextInputType.number,
+                        textAlign: TextAlign.center,
                         onChanged: (value) {
                           _updateSet(set.setNumber, null, value);
                         },
@@ -286,6 +370,20 @@ class _ExerciseSetsTable extends StatelessWidget {
                 ),
               );
             }).toList(),
+          ),
+          const SizedBox(height: 8),
+          SizedBox(
+            width: double.infinity,
+            child: OutlinedButton.icon(
+              onPressed: () {
+                final next = rows.length + 1;
+                final updated = List<ExerciseSetDetail>.from(rows)
+                  ..add(ExerciseSetDetail(setNumber: next));
+                _emitUpdated(updated);
+              },
+              icon: const Icon(Icons.add),
+              label: const Text('Aggiungi serie'),
+            ),
           ),
         ],
       ),
