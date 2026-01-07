@@ -49,6 +49,7 @@ class PlanWorkoutExercise {
     this.notes,
     this.videoUrl,
     this.setDetails = const [],
+    this.recoverySeconds,
   });
 
   final int id;
@@ -60,6 +61,7 @@ class PlanWorkoutExercise {
   final String? notes;
   final String? videoUrl;
   final List<ExerciseSetDetail> setDetails;
+  final int? recoverySeconds;
 
   PlanWorkoutExercise copyWith({
     int? sets,
@@ -67,6 +69,8 @@ class PlanWorkoutExercise {
     String? notes,
     String? videoUrl,
     List<ExerciseSetDetail>? setDetails,
+    int? recoverySeconds,
+    bool clearRecovery = false,
   }) {
     return PlanWorkoutExercise(
       id: id,
@@ -78,6 +82,8 @@ class PlanWorkoutExercise {
       notes: notes ?? this.notes,
       videoUrl: videoUrl ?? this.videoUrl,
       setDetails: setDetails ?? this.setDetails,
+      recoverySeconds:
+          clearRecovery ? null : (recoverySeconds ?? this.recoverySeconds),
     );
   }
 }

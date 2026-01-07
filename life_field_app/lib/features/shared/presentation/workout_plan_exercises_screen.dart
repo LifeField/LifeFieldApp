@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../data/datasources/workout_plan_local_data_source.dart';
@@ -113,7 +114,7 @@ class _WorkoutPlanExercisesScreenState
                                   ),
                                   style: Theme.of(context)
                                       .textTheme
-                                      .bodySmall
+                                      .bodyMedium
                                       ?.copyWith(
                                         color: Theme.of(context)
                                             .colorScheme
@@ -244,6 +245,7 @@ class _WorkoutPlanExercisesScreenState
             ? ex.setDetails
             : [const ExerciseSetDetail(setNumber: 1)],
         notes: ex.notes,
+        recoverySeconds: ex.recoverySeconds,
       );
     }
     if (!mounted) return;
@@ -385,9 +387,126 @@ class _ExerciseSetsTable extends StatelessWidget {
               label: const Text('Aggiungi serie'),
             ),
           ),
+          const SizedBox(height: 8),
+          exercise.recoverySeconds == null
+              ? SizedBox(
+                  width: double.infinity,
+                  child: OutlinedButton.icon(
+                    onPressed: () => _showRecoveryPicker(context),
+                    icon: const Icon(Icons.timer_outlined),
+                    label: const Text('Aggiungi recupero'),
+                  ),
+                )
+              : InkWell(
+                  onTap: () => _showRecoveryPicker(context),
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 10,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .surfaceVariant
+                          .withOpacity(0.4),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.timer_outlined, size: 18),
+                        const SizedBox(width: 8),
+                        Text(
+                          'Recupero: ${_formatRecovery(exercise.recoverySeconds!)}',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
         ],
       ),
     );
+  }
+
+  Future<void> _showRecoveryPicker(BuildContext context) async {
+    Duration selected = Duration(
+      seconds: exercise.recoverySeconds ?? 60,
+    );
+    await showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      builder: (context) => SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Seleziona recupero',
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium
+                      ?.copyWith(fontWeight: FontWeight.w700),
+                ),
+                const SizedBox(height: 12),
+                SizedBox(
+                  height: 180,
+                  child: CupertinoTimerPicker(
+                    mode: CupertinoTimerPickerMode.ms,
+                    initialTimerDuration: selected,
+                    onTimerDurationChanged: (value) {
+                      selected = value;
+                    },
+                  ),
+                ),
+                const SizedBox(height: 12),
+                SizedBox(
+                  width: double.infinity,
+                  child: Column(
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          if (selected < const Duration(seconds: 5)) {
+                            selected = const Duration(seconds: 5);
+                          }
+                          onChanged(
+                            exercise.copyWith(
+                              recoverySeconds:
+                                  selected.inSeconds.clamp(5, 600),
+                            ),
+                          );
+                          Navigator.of(context).pop();
+                        },
+                        child: const Text('Conferma'),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          onChanged(exercise.copyWith(clearRecovery: true));
+                          Navigator.of(context).pop();
+                        },
+                        child: const Text('Disattiva recupero'),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  String _formatRecovery(int seconds) {
+    final minutes = seconds ~/ 60;
+    final secs = seconds % 60;
+    if (minutes <= 0) return '${secs}s';
+    final padded = secs.toString().padLeft(2, '0');
+    return '$minutes:$padded';
   }
 
   void _updateSet(int setNumber, String? weight, String? reps) {

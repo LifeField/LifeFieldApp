@@ -195,6 +195,7 @@ class WorkoutPlanLocalDataSource {
             ? row['video_url'] as String
             : null,
         setDetails: safeDetails,
+        recoverySeconds: row['recovery_seconds'] as int?,
       );
     }).toList();
   }
@@ -204,6 +205,7 @@ class WorkoutPlanLocalDataSource {
     required ExerciseCatalogEntry exercise,
     List<ExerciseSetDetail>? setDetails,
     String? notes,
+    int? recoverySeconds,
   }) async {
     final db = await _base.database();
     final details = setDetails ??
@@ -213,19 +215,25 @@ class WorkoutPlanLocalDataSource {
     final sets = details.length;
     final firstReps = details.first.reps;
     final reps = int.tryParse(firstReps ?? '') ?? 0;
-    final id = await db.insert(
-      'plan_workout_exercises',
-      {
-        'workout_id': workoutId,
-        'exercise_id': exercise.id,
-        'exercise_name': exercise.name,
-        'sets': sets,
-        'reps': reps,
-        'notes': notes ?? '',
-        'video_url': exercise.videoUrl ?? '',
-        'sets_payload': _encodeSets(details),
-      },
-    );
+    final values = {
+      'workout_id': workoutId,
+      'exercise_id': exercise.id,
+      'exercise_name': exercise.name,
+      'sets': sets,
+      'reps': reps,
+      'notes': notes ?? '',
+      'video_url': exercise.videoUrl ?? '',
+      'sets_payload': _encodeSets(details),
+      'recovery_seconds': recoverySeconds,
+    };
+    int id;
+    try {
+      id = await db.insert('plan_workout_exercises', values);
+    } catch (e) {
+      final fallback = Map<String, Object?>.from(values)
+        ..remove('recovery_seconds');
+      id = await db.insert('plan_workout_exercises', fallback);
+    }
     return PlanWorkoutExercise(
       id: id,
       workoutId: workoutId,
@@ -236,6 +244,7 @@ class WorkoutPlanLocalDataSource {
       notes: notes,
       videoUrl: exercise.videoUrl,
       setDetails: details,
+      recoverySeconds: recoverySeconds,
     );
   }
 
@@ -252,6 +261,7 @@ class WorkoutPlanLocalDataSource {
     required int exerciseId,
     required List<ExerciseSetDetail> setDetails,
     String? notes,
+    int? recoverySeconds,
   }) async {
     final db = await _base.database();
     final normalized = List<ExerciseSetDetail>.generate(
@@ -271,17 +281,30 @@ class WorkoutPlanLocalDataSource {
     final reps = normalized.isNotEmpty
         ? int.tryParse(normalized.first.reps ?? '') ?? 0
         : 0;
-    await db.update(
-      'plan_workout_exercises',
-      {
-        'sets': sets,
-        'reps': reps,
-        'sets_payload': _encodeSets(normalized),
-        'notes': notes ?? '',
-      },
-      where: 'id = ?',
-      whereArgs: [exerciseId],
-    );
+    final values = {
+      'sets': sets,
+      'reps': reps,
+      'sets_payload': _encodeSets(normalized),
+      'notes': notes ?? '',
+      'recovery_seconds': recoverySeconds,
+    };
+    try {
+      await db.update(
+        'plan_workout_exercises',
+        values,
+        where: 'id = ?',
+        whereArgs: [exerciseId],
+      );
+    } catch (e) {
+      final fallback = Map<String, Object?>.from(values)
+        ..remove('recovery_seconds');
+      await db.update(
+        'plan_workout_exercises',
+        fallback,
+        where: 'id = ?',
+        whereArgs: [exerciseId],
+      );
+    }
   }
 
   Future<void> setCurrentPlan(int planId) async {

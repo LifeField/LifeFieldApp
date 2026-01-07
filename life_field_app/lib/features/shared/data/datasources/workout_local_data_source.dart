@@ -16,7 +16,7 @@ class WorkoutLocalDataSource {
     final path = join(dbPath, 'life_field_workouts.db');
     _db = await openDatabase(
       path,
-      version: 5,
+      version: 6,
       onConfigure: (db) async {
         await db.execute('PRAGMA foreign_keys = ON');
       },
@@ -40,8 +40,14 @@ class WorkoutLocalDataSource {
             'ALTER TABLE plan_workout_exercises ADD COLUMN sets_payload TEXT NOT NULL DEFAULT ""',
           );
         }
+        if (oldVersion < 6) {
+          await db.execute(
+            'ALTER TABLE plan_workout_exercises ADD COLUMN recovery_seconds INTEGER',
+          );
+        }
       },
     );
+    await _ensureRecoveryColumn(_db!);
     return _db!;
   }
 
@@ -89,9 +95,24 @@ class WorkoutLocalDataSource {
           notes TEXT,
           video_url TEXT,
           sets_payload TEXT NOT NULL DEFAULT '',
+          recovery_seconds INTEGER,
           FOREIGN KEY(workout_id) REFERENCES plan_workouts(id) ON DELETE CASCADE
         );
         ''');
+  }
+
+  Future<void> _ensureRecoveryColumn(Database db) async {
+    try {
+      final rows = await db.rawQuery('PRAGMA table_info(plan_workout_exercises)');
+      final hasColumn = rows.any((row) => row['name'] == 'recovery_seconds');
+      if (!hasColumn) {
+        await db.execute(
+          'ALTER TABLE plan_workout_exercises ADD COLUMN recovery_seconds INTEGER',
+        );
+      }
+    } catch (_) {
+      // Best effort: ignore if table is missing during first init.
+    }
   }
 
   Future<List<WorkoutEntry>> fetchWorkouts() async {
