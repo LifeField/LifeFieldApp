@@ -167,7 +167,7 @@ class WorkoutPlanLocalDataSource {
       'plan_workout_exercises',
       where: 'workout_id = ?',
       whereArgs: [workoutId],
-      orderBy: 'id ASC',
+      orderBy: 'order_index ASC, id ASC',
     );
     return rows.map((row) {
       final sets = (row['sets'] as int?) ?? 0;
@@ -225,6 +225,7 @@ class WorkoutPlanLocalDataSource {
       'video_url': exercise.videoUrl ?? '',
       'sets_payload': _encodeSets(details),
       'recovery_seconds': recoverySeconds,
+      'order_index': await _nextExerciseOrder(workoutId),
     };
     int id;
     try {
@@ -305,6 +306,33 @@ class WorkoutPlanLocalDataSource {
         whereArgs: [exerciseId],
       );
     }
+  }
+
+  Future<void> updateExerciseOrder({
+    required int workoutId,
+    required List<int> orderedExerciseIds,
+  }) async {
+    final db = await _base.database();
+    await db.transaction((txn) async {
+      for (var i = 0; i < orderedExerciseIds.length; i += 1) {
+        await txn.update(
+          'plan_workout_exercises',
+          {'order_index': i + 1},
+          where: 'id = ? AND workout_id = ?',
+          whereArgs: [orderedExerciseIds[i], workoutId],
+        );
+      }
+    });
+  }
+
+  Future<int> _nextExerciseOrder(int workoutId) async {
+    final db = await _base.database();
+    final rows = await db.rawQuery(
+      'SELECT MAX(order_index) as max_order FROM plan_workout_exercises WHERE workout_id = ?',
+      [workoutId],
+    );
+    final maxOrder = rows.isNotEmpty ? rows.first['max_order'] as int? : null;
+    return (maxOrder ?? 0) + 1;
   }
 
   Future<void> setCurrentPlan(int planId) async {

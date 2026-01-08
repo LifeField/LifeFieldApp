@@ -61,15 +61,38 @@ class _WorkoutPlanExercisesScreenState
             padding: const EdgeInsets.all(16),
             child: _loading
                 ? const Center(child: CircularProgressIndicator())
-                : ListView.separated(
+              : ReorderableListView.builder(
                     itemCount: _exercises.length + 1,
-                    separatorBuilder: (_, __) => const SizedBox(height: 12),
+                    buildDefaultDragHandles: false,
+                    keyboardDismissBehavior:
+                        ScrollViewKeyboardDismissBehavior.onDrag,
+                    onReorder: (oldIndex, newIndex) async {
+                      if (oldIndex >= _exercises.length ||
+                          newIndex > _exercises.length) {
+                        return;
+                      }
+                      if (newIndex > oldIndex) newIndex -= 1;
+                      setState(() {
+                        final item = _exercises.removeAt(oldIndex);
+                        _exercises.insert(newIndex, item);
+                        _modified = true;
+                      });
+                      await _dataSource.updateExerciseOrder(
+                        workoutId: widget.workoutId,
+                        orderedExerciseIds:
+                            _exercises.map((e) => e.id).toList(),
+                      );
+                    },
                     itemBuilder: (context, index) {
                       if (index == _exercises.length) {
-                        return _AddExerciseCard(onTap: _showAddExerciseDialog);
+                        return Padding(
+                          key: const ValueKey('add-exercise'),
+                          padding: const EdgeInsets.only(top: 12),
+                          child: _AddExerciseCard(onTap: _showAddExerciseDialog),
+                        );
                       }
                       final ex = _exercises[index];
-                      return Dismissible(
+                      final card = Dismissible(
                         key: ValueKey('exercise-${ex.id}'),
                         background: _buildNeutralBackground(context),
                         secondaryBackground: _buildDeleteBackground(context),
@@ -97,7 +120,20 @@ class _WorkoutPlanExercisesScreenState
                                         style: Theme.of(context)
                                             .textTheme
                                             .titleMedium
-                                            ?.copyWith(fontWeight: FontWeight.w700),
+                                            ?.copyWith(
+                                              fontWeight: FontWeight.w700,
+                                            ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 8),
+                                    ReorderableDragStartListener(
+                                      index: index,
+                                      child: Listener(
+                                        onPointerDown: (_) =>
+                                            FocusScope.of(context).unfocus(),
+                                        child: const Icon(
+                                          Icons.drag_indicator_outlined,
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -141,6 +177,11 @@ class _WorkoutPlanExercisesScreenState
                             ),
                           ),
                         ),
+                      );
+                      return Padding(
+                        key: ValueKey('exercise-card-${ex.id}'),
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: card,
                       );
                     },
                   ),

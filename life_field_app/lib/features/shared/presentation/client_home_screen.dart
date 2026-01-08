@@ -9,6 +9,7 @@ import '../data/datasources/workout_plan_local_data_source.dart';
 import '../domain/entities/meal_models.dart';
 import '../domain/entities/workout_models.dart';
 import 'meal_detail_screen.dart';
+import 'workout_execution_screen.dart';
 import 'workout_selection_screen.dart';
 import '../../profile/presentation/profile_screen.dart';
 
@@ -470,7 +471,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                               ),
                               if (_selectedWorkout != null)
                                 IconButton.filled(
-                                  onPressed: _openWorkoutSelection,
+                                  onPressed: _openWorkoutExecution,
                                   icon: const Icon(Icons.play_arrow),
                                 ),
                             ],
@@ -586,6 +587,19 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
       });
       await _loadSelectedWorkoutExercises(selected.id);
     }
+  }
+
+  Future<void> _openWorkoutExecution() async {
+    final workout = _selectedWorkout;
+    if (workout == null) return;
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => WorkoutExecutionScreen(
+          workoutId: workout.id,
+          workoutName: workout.name,
+        ),
+      ),
+    );
   }
 
   Future<void> _loadCurrentPlan() async {

@@ -16,7 +16,7 @@ class WorkoutLocalDataSource {
     final path = join(dbPath, 'life_field_workouts.db');
     _db = await openDatabase(
       path,
-      version: 6,
+      version: 7,
       onConfigure: (db) async {
         await db.execute('PRAGMA foreign_keys = ON');
       },
@@ -45,9 +45,18 @@ class WorkoutLocalDataSource {
             'ALTER TABLE plan_workout_exercises ADD COLUMN recovery_seconds INTEGER',
           );
         }
+        if (oldVersion < 7) {
+          await db.execute(
+            'ALTER TABLE plan_workout_exercises ADD COLUMN order_index INTEGER NOT NULL DEFAULT 0',
+          );
+          await db.execute(
+            'UPDATE plan_workout_exercises SET order_index = id WHERE order_index = 0',
+          );
+        }
       },
     );
     await _ensureRecoveryColumn(_db!);
+    await _ensureOrderColumn(_db!);
     return _db!;
   }
 
@@ -96,6 +105,7 @@ class WorkoutLocalDataSource {
           video_url TEXT,
           sets_payload TEXT NOT NULL DEFAULT '',
           recovery_seconds INTEGER,
+          order_index INTEGER NOT NULL DEFAULT 0,
           FOREIGN KEY(workout_id) REFERENCES plan_workouts(id) ON DELETE CASCADE
         );
         ''');
@@ -108,6 +118,23 @@ class WorkoutLocalDataSource {
       if (!hasColumn) {
         await db.execute(
           'ALTER TABLE plan_workout_exercises ADD COLUMN recovery_seconds INTEGER',
+        );
+      }
+    } catch (_) {
+      // Best effort: ignore if table is missing during first init.
+    }
+  }
+
+  Future<void> _ensureOrderColumn(Database db) async {
+    try {
+      final rows = await db.rawQuery('PRAGMA table_info(plan_workout_exercises)');
+      final hasColumn = rows.any((row) => row['name'] == 'order_index');
+      if (!hasColumn) {
+        await db.execute(
+          'ALTER TABLE plan_workout_exercises ADD COLUMN order_index INTEGER NOT NULL DEFAULT 0',
+        );
+        await db.execute(
+          'UPDATE plan_workout_exercises SET order_index = id WHERE order_index = 0',
         );
       }
     } catch (_) {
