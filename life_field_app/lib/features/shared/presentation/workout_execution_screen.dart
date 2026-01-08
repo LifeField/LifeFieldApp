@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../data/datasources/workout_plan_local_data_source.dart';
+import '../data/datasources/workout_session_local_data_source.dart';
 import '../domain/entities/workout_models.dart';
+import '../domain/entities/workout_session.dart';
 
 class WorkoutExecutionScreen extends StatefulWidget {
   const WorkoutExecutionScreen({
@@ -23,11 +25,15 @@ class WorkoutExecutionScreen extends StatefulWidget {
 class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
   final WorkoutPlanLocalDataSource _dataSource =
       WorkoutPlanLocalDataSource.instance;
-  final Stopwatch _stopwatch = Stopwatch();
+  final WorkoutSessionLocalDataSource _sessionSource =
+      WorkoutSessionLocalDataSource.instance;
   Timer? _timer;
   final List<PlanWorkoutExercise> _exercises = [];
   bool _loading = true;
   bool _started = false;
+  bool _finished = false;
+  WorkoutSession? _session;
+  Duration? _finalDuration;
 
   @override
   void initState() {
@@ -35,7 +41,7 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
     _loadExercises();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) {
-        _showStartDialog();
+        _loadSessionAndPrompt();
       }
     });
   }
@@ -43,7 +49,6 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
   @override
   void dispose() {
     _timer?.cancel();
-    _stopwatch.stop();
     super.dispose();
   }
 
@@ -90,6 +95,20 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
                             },
                           ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                    child: SizedBox(
+                      width: double.infinity,
+                    child: OutlinedButton(
+                        onPressed: _finished ? null : _stopTimerAndClose,
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                          foregroundColor: Colors.white,
+                        ),
+                        child: const Text('Termina allenamento'),
+                      ),
+                    ),
+                  ),
                 ],
               ),
       ),
@@ -99,10 +118,22 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
   void _startTimer() {
     if (_started) return;
     _started = true;
-    _stopwatch.start();
+    _finished = false;
+    _finalDuration = null;
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!mounted) return;
       setState(() {});
+    });
+  }
+
+  void _stopTimer() {
+    if (_session != null) {
+      _finalDuration = DateTime.now().difference(_session!.startedAt);
+    }
+    _timer?.cancel();
+    _timer = null;
+    setState(() {
+      _finished = true;
     });
   }
 
@@ -118,6 +149,12 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
   }
 
   WorkoutMetrics _buildMetrics() {
+    final startedAt = _session?.startedAt;
+    final duration = startedAt == null
+        ? Duration.zero
+        : (_finished && _finalDuration != null
+            ? _finalDuration!
+            : DateTime.now().difference(startedAt));
     var totalSets = 0;
     var totalReps = 0;
     var tonnage = 0.0;
@@ -132,7 +169,7 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
       }
     }
     return WorkoutMetrics(
-      duration: _stopwatch.elapsed,
+      duration: duration,
       totalSets: totalSets,
       totalReps: totalReps,
       tonnage: tonnage,
@@ -143,6 +180,19 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
     if (raw == null || raw.trim().isEmpty) return 0;
     final normalized = raw.replaceAll(',', '.');
     return double.tryParse(normalized) ?? 0;
+  }
+
+  Future<void> _loadSessionAndPrompt() async {
+    final active = await _sessionSource.fetchActiveSession();
+    if (!mounted) return;
+    if (active != null && active.workoutId == widget.workoutId) {
+      setState(() {
+        _session = active;
+      });
+      _startTimer();
+      return;
+    }
+    await _showStartDialog();
   }
 
   Future<void> _showStartDialog() async {
@@ -158,10 +208,6 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                OutlinedButton(
-                  onPressed: () => Navigator.of(context).pop(false),
-                  child: const Text('Annulla'),
-                ),
                 const SizedBox(height: 8),
                 OutlinedButton.icon(
                   onPressed: () => Navigator.of(context).pop(true),
@@ -172,6 +218,10 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
                   ),
                   label: const Text('Avvia'),
                 ),
+                OutlinedButton(
+                  onPressed: () => Navigator.of(context).pop(false),
+                  child: const Text('Annulla'),
+                ),
               ],
             ),
           ),
@@ -180,6 +230,19 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
     );
     if (!mounted) return;
     if (shouldStart == true) {
+      final startedAt = DateTime.now();
+      await _sessionSource.startSession(
+        workoutId: widget.workoutId,
+        workoutName: widget.workoutName,
+        startedAt: startedAt,
+      );
+      setState(() {
+        _session = WorkoutSession(
+          workoutId: widget.workoutId,
+          workoutName: widget.workoutName,
+          startedAt: startedAt,
+        );
+      });
       _startTimer();
     } else {
       Navigator.of(context).pop();
@@ -213,6 +276,11 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
       notes: updated.notes,
       recoverySeconds: updated.recoverySeconds,
     );
+  }
+
+  Future<void> _stopTimerAndClose() async {
+    _stopTimer();
+    await _sessionSource.endSession();
   }
 }
 
@@ -422,7 +490,7 @@ class _ExerciseCard extends StatelessWidget {
                       SizedBox(
                         width: 60,
                         child: Center(
-                          child: Text('Serie ${set.setNumber}'),
+                          child: Text('${set.setNumber}'),
                         ),
                       ),
                       const SizedBox(width: 12),

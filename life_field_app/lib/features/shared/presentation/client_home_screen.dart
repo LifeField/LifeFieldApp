@@ -6,8 +6,10 @@ import '../../../app/localization/app_localizations.dart';
 import '../../../app/router/route_paths.dart';
 import '../data/datasources/meal_local_data_source.dart';
 import '../data/datasources/workout_plan_local_data_source.dart';
+import '../data/datasources/workout_session_local_data_source.dart';
 import '../domain/entities/meal_models.dart';
 import '../domain/entities/workout_models.dart';
+import '../domain/entities/workout_session.dart';
 import 'meal_detail_screen.dart';
 import 'workout_execution_screen.dart';
 import 'workout_selection_screen.dart';
@@ -26,17 +28,21 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
   final MealLocalDataSource _mealDataSource = MealLocalDataSource.instance;
   final WorkoutPlanLocalDataSource _planDataSource =
       WorkoutPlanLocalDataSource.instance;
+  final WorkoutSessionLocalDataSource _sessionDataSource =
+      WorkoutSessionLocalDataSource.instance;
   final List<_Meal> _meals = [];
   WorkoutPlan? _currentPlan;
   List<PlanWorkout> _currentPlanWorkouts = [];
   PlanWorkout? _selectedWorkout;
   List<PlanWorkoutExercise> _selectedWorkoutExercises = [];
+  WorkoutSession? _activeSession;
 
   @override
   void initState() {
     super.initState();
     _loadMealsForDate();
     _loadCurrentPlan();
+    _loadActiveSession();
   }
 
   @override
@@ -430,9 +436,9 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      _selectedWorkout != null
-                                          ? _selectedWorkout!.name
-                                          : 'Nessun workout selezionato',
+                                      _activeSession?.workoutName ??
+                                          _selectedWorkout?.name ??
+                                          'Nessun workout selezionato',
                                       style: Theme.of(context)
                                           .textTheme
                                           .bodyLarge
@@ -469,11 +475,25 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                                   ],
                                 ),
                               ),
-                              if (_selectedWorkout != null)
-                                IconButton.filled(
-                                  onPressed: _openWorkoutExecution,
-                                  icon: const Icon(Icons.play_arrow),
-                                ),
+                              if (_activeSession != null ||
+                                  _selectedWorkout != null)
+                                _activeSession != null
+                                    ? OutlinedButton(
+                                        onPressed: _resumeWorkoutExecution,
+                                        style: OutlinedButton.styleFrom(
+                                          backgroundColor: Colors.green,
+                                          foregroundColor: Colors.white,
+                                        ),
+                                        child: const Text('Riprendi'),
+                                      )
+                                    : IconButton.filled(
+                                        onPressed: _openWorkoutExecution,
+                                        icon: const Icon(Icons.play_arrow),
+                                        style: IconButton.styleFrom(
+                                          backgroundColor: Colors.green,
+                                          foregroundColor: Colors.white,
+                                        )
+                                      ),
                             ],
                           ),
                         ),
@@ -554,6 +574,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
     if (index == 1) {
       // Ricarica i dati workout quando si torna in Home.
       _loadCurrentPlan();
+      _loadActiveSession();
     }
   }
 
@@ -600,6 +621,21 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         ),
       ),
     );
+    await _loadActiveSession();
+  }
+
+  Future<void> _resumeWorkoutExecution() async {
+    final session = _activeSession;
+    if (session == null) return;
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => WorkoutExecutionScreen(
+          workoutId: session.workoutId,
+          workoutName: session.workoutName,
+        ),
+      ),
+    );
+    await _loadActiveSession();
   }
 
   Future<void> _loadCurrentPlan() async {
@@ -610,6 +646,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         _currentPlanWorkouts = [];
         _selectedWorkout = null;
         _selectedWorkoutExercises = [];
+        _activeSession = null;
       });
       return;
     }
@@ -647,6 +684,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
     if (selected != null) {
       await _loadSelectedWorkoutExercises(selected.id);
     }
+    await _loadActiveSession();
   }
 
   void _openCurrentPlanWorkouts() {
@@ -695,6 +733,22 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
     if (!mounted) return;
     setState(() {
       _selectedWorkoutExercises = exercises;
+    });
+  }
+
+  Future<void> _loadActiveSession() async {
+    final session = await _sessionDataSource.fetchActiveSession();
+    if (!mounted) return;
+    setState(() {
+      _activeSession = session;
+      if (session != null) {
+        final match = _currentPlanWorkouts
+            .where((w) => w.id == session.workoutId)
+            .toList();
+        if (match.isNotEmpty) {
+          _selectedWorkout = match.first;
+        }
+      }
     });
   }
 
