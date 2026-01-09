@@ -228,10 +228,16 @@ class _WorkoutPlanExercisesScreenState
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
+            style: TextButton.styleFrom(
+              foregroundColor: Theme.of(context).colorScheme.error,
+            ),
             child: const Text('Annulla'),
           ),
-          ElevatedButton(
+          TextButton(
             onPressed: () => Navigator.of(context).pop(true),
+            style: TextButton.styleFrom(
+              foregroundColor: Theme.of(context).colorScheme.error,
+            ),
             child: const Text('Elimina'),
           ),
         ],
@@ -524,13 +530,16 @@ class _ExerciseSetsTable extends StatelessWidget {
                         },
                         child: const Text('Conferma'),
                       ),
-                      TextButton(
-                        onPressed: () {
-                          onChanged(exercise.copyWith(clearRecovery: true));
-                          Navigator.of(context).pop();
-                        },
-                        child: const Text('Disattiva recupero'),
+                    TextButton(
+                      onPressed: () {
+                        onChanged(exercise.copyWith(clearRecovery: true));
+                        Navigator.of(context).pop();
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: Theme.of(context).colorScheme.error,
                       ),
+                      child: const Text('Disattiva recupero'),
+                    ),
                     ],
                   ),
                 ),

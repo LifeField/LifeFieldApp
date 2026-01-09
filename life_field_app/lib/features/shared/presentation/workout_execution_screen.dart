@@ -116,7 +116,7 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
                     child: OutlinedButton(
                         onPressed: _finished ? null : _stopTimerAndClose,
                         style: OutlinedButton.styleFrom(
-                          backgroundColor: Colors.green,
+                          backgroundColor: Theme.of(context).colorScheme.primary,
                           foregroundColor: Colors.white,
                         ),
                         child: const Text('Termina allenamento'),
@@ -230,13 +230,16 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
                   onPressed: () => Navigator.of(context).pop(true),
                   icon: const Icon(Icons.play_arrow),
                   style: OutlinedButton.styleFrom(
-                    backgroundColor: Colors.green,
+                    backgroundColor: Theme.of(context).colorScheme.primary,
                     foregroundColor: Colors.white,
                   ),
                   label: const Text('Avvia'),
                 ),
                 OutlinedButton(
                   onPressed: () => Navigator.of(context).pop(false),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: Theme.of(context).colorScheme.error,
+                  ),
                   child: const Text('Annulla'),
                 ),
               ],
@@ -683,7 +686,4 @@ class _RecoveryBadge extends StatelessWidget {
     );
   }
 }
-
-
-
 

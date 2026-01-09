@@ -481,7 +481,9 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                                     ? OutlinedButton(
                                         onPressed: _resumeWorkoutExecution,
                                         style: OutlinedButton.styleFrom(
-                                          backgroundColor: Colors.green,
+                                          backgroundColor: Theme.of(context)
+                                              .colorScheme
+                                              .primary,
                                           foregroundColor: Colors.white,
                                         ),
                                         child: const Text('Riprendi'),
@@ -490,7 +492,9 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                                         onPressed: _openWorkoutExecution,
                                         icon: const Icon(Icons.play_arrow),
                                         style: IconButton.styleFrom(
-                                          backgroundColor: Colors.green,
+                                          backgroundColor: Theme.of(context)
+                                              .colorScheme
+                                              .primary,
                                           foregroundColor: Colors.white,
                                         )
                                       ),
