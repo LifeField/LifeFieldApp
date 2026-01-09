@@ -11,8 +11,13 @@ class RoutePaths {
   static const workoutName = 'workout';
   static const workoutPlanDetail = '$workout/:planId';
   static const workoutPlanDetailName = 'workout-plan-detail';
+  static const workoutExecutionBase = '/workout/execution';
+  static const workoutExecution = '$workoutExecutionBase/:workoutId';
+  static const workoutExecutionName = 'workout-execution';
   static const profile = '/profile';
   static const profileName = 'profile';
 
   static String mealDetailFor(int mealIndex) => '$mealBase/$mealIndex';
+  static String workoutExecutionFor(int workoutId) =>
+      '$workoutExecutionBase/$workoutId';
 }

@@ -10,7 +10,9 @@ import '../../features/shared/presentation/client_home_screen.dart';
 import '../../features/shared/presentation/meal_detail_screen.dart';
 import '../../features/shared/presentation/workout_plan_detail_screen.dart';
 import '../../features/shared/presentation/workout_screen.dart';
+import '../../features/shared/presentation/workout_execution_screen.dart';
 import '../../features/shared/presentation/pro_home_screen.dart';
+import '../../core/navigation/app_navigator.dart';
 import 'go_router_refresh_stream.dart';
 import 'role_redirect.dart';
 import 'route_paths.dart';
@@ -21,6 +23,7 @@ final routerProvider = Provider<GoRouter>((ref) {
 
   return GoRouter(
     initialLocation: RoutePaths.login,
+    navigatorKey: appNavigatorKey,
     refreshListenable: GoRouterRefreshStream(authNotifier.stream),
     redirect: (context, state) {
       final loggingIn = state.matchedLocation == RoutePaths.login;
@@ -100,6 +103,23 @@ final routerProvider = Provider<GoRouter>((ref) {
           return MealDetailScreen(
             mealIndex: args?.mealIndex ?? mealIndex,
             initialFoods: args?.foods ?? const [],
+          );
+        },
+      ),
+      GoRoute(
+        name: RoutePaths.workoutExecutionName,
+        path: RoutePaths.workoutExecution,
+        builder: (context, state) {
+          final workoutId =
+              int.tryParse(state.pathParameters['workoutId'] ?? '');
+          if (workoutId == null) {
+            return const ClientHomeScreen();
+          }
+          final workoutName =
+              state.extra is String ? state.extra as String : 'Allenamento';
+          return WorkoutExecutionScreen(
+            workoutId: workoutId,
+            workoutName: workoutName,
           );
         },
       ),

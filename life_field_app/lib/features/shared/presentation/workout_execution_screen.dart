@@ -1,9 +1,12 @@
 ﻿import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../../../core/notifications/notification_service.dart';
 import '../data/datasources/workout_plan_local_data_source.dart';
+import '../data/datasources/workout_recovery_local_data_source.dart';
 import '../data/datasources/workout_session_local_data_source.dart';
 import '../domain/entities/workout_models.dart';
 import '../domain/entities/workout_session.dart';
@@ -27,6 +30,8 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
       WorkoutPlanLocalDataSource.instance;
   final WorkoutSessionLocalDataSource _sessionSource =
       WorkoutSessionLocalDataSource.instance;
+  final WorkoutRecoveryLocalDataSource _recoverySource =
+      WorkoutRecoveryLocalDataSource.instance;
   Timer? _timer;
   final List<PlanWorkoutExercise> _exercises = [];
   bool _loading = true;
@@ -34,6 +39,8 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
   bool _finished = false;
   WorkoutSession? _session;
   Duration? _finalDuration;
+  Map<int, DateTime> _activeRecoveries = {};
+  final Map<int, Timer> _recoveryTimers = {};
 
   @override
   void initState() {
@@ -49,6 +56,9 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
   @override
   void dispose() {
     _timer?.cancel();
+    for (final timer in _recoveryTimers.values) {
+      timer.cancel();
+    }
     super.dispose();
   }
 
@@ -91,6 +101,10 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
                                     reps,
                                   );
                                 },
+                                onRecoveryPressed: ex.recoverySeconds == null
+                                    ? null
+                                    : () => _startRecoveryTimer(ex),
+                                recoveryEndsAt: _activeRecoveries[ex.id],
                               );
                             },
                           ),
@@ -122,6 +136,7 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
     _finalDuration = null;
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!mounted) return;
+      _pruneExpiredRecoveries();
       setState(() {});
     });
   }
@@ -139,12 +154,14 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
 
   Future<void> _loadExercises() async {
     final items = await _dataSource.fetchExercises(widget.workoutId);
+    final recoveries = await _recoverySource.fetchRecoveries(widget.workoutId);
     if (!mounted) return;
     setState(() {
       _exercises
         ..clear()
         ..addAll(items);
       _loading = false;
+      _activeRecoveries = recoveries;
     });
   }
 
@@ -282,6 +299,72 @@ class _WorkoutExecutionScreenState extends State<WorkoutExecutionScreen> {
     _stopTimer();
     await _sessionSource.endSession();
   }
+
+  Future<void> _startRecoveryTimer(PlanWorkoutExercise exercise) async {
+    final seconds = exercise.recoverySeconds ?? 0;
+    if (seconds <= 0) return;
+    final endsAt = DateTime.now().add(Duration(seconds: seconds));
+    _recoveryTimers[exercise.id]?.cancel();
+    _recoveryTimers[exercise.id] = Timer(Duration(seconds: seconds), () async {
+      await NotificationService.instance.showRecoveryNotificationNow(
+        id: _recoveryNotificationId(exercise.id),
+        title: 'Recupero terminato',
+        body: 'Puoi riprendere ${exercise.exerciseName}',
+        payload: jsonEncode({
+          'workoutId': widget.workoutId,
+          'workoutName': widget.workoutName,
+        }),
+      );
+      if (!mounted) return;
+      setState(() {
+        _activeRecoveries.remove(exercise.id);
+      });
+      await _recoverySource.clearRecovery(
+        workoutId: widget.workoutId,
+        exerciseId: exercise.id,
+      );
+    });
+    await _recoverySource.setRecovery(
+      workoutId: widget.workoutId,
+      exerciseId: exercise.id,
+      endsAt: endsAt,
+    );
+    await NotificationService.instance.scheduleRecoveryNotification(
+      id: _recoveryNotificationId(exercise.id),
+      title: 'Recupero terminato',
+      body: 'Puoi riprendere ${exercise.exerciseName}',
+      after: Duration(seconds: seconds),
+      payload: jsonEncode({
+        'workoutId': widget.workoutId,
+        'workoutName': widget.workoutName,
+      }),
+    );
+    if (!mounted) return;
+    setState(() {
+      _activeRecoveries[exercise.id] = endsAt;
+    });
+  }
+
+  int _recoveryNotificationId(int exerciseId) {
+    return (widget.workoutId * 100000) + exerciseId;
+  }
+
+  void _pruneExpiredRecoveries() {
+    if (_activeRecoveries.isEmpty) return;
+    final now = DateTime.now();
+    final expired = _activeRecoveries.entries
+        .where((entry) => !entry.value.isAfter(now))
+        .map((entry) => entry.key)
+        .toList();
+    if (expired.isEmpty) return;
+    for (final id in expired) {
+      _activeRecoveries.remove(id);
+      _recoverySource.clearRecovery(
+        workoutId: widget.workoutId,
+        exerciseId: id,
+      );
+    }
+  }
 }
 
 class WorkoutMetrics {
@@ -395,10 +478,14 @@ class _ExerciseCard extends StatelessWidget {
   const _ExerciseCard({
     required this.exercise,
     required this.onSetChanged,
+    required this.onRecoveryPressed,
+    required this.recoveryEndsAt,
   });
 
   final PlanWorkoutExercise exercise;
   final void Function(int setNumber, String? weight, String? reps) onSetChanged;
+  final VoidCallback? onRecoveryPressed;
+  final DateTime? recoveryEndsAt;
 
   @override
   Widget build(BuildContext context) {
@@ -414,12 +501,26 @@ class _ExerciseCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              exercise.exerciseName,
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium
-                  ?.copyWith(fontWeight: FontWeight.w700),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: Text(
+                    exercise.exerciseName,
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium
+                        ?.copyWith(fontWeight: FontWeight.w700),
+                  ),
+                ),
+                if (onRecoveryPressed != null)
+                  recoveryEndsAt == null
+                      ? OutlinedButton(
+                          onPressed: onRecoveryPressed,
+                          child: const Text('Avvia recupero'),
+                        )
+                      : _RecoveryBadge(endsAt: recoveryEndsAt!),
+              ],
             ),
             if (exercise.notes != null && exercise.notes!.trim().isNotEmpty)
               Padding(
@@ -440,6 +541,7 @@ class _ExerciseCard extends StatelessWidget {
                 ),
               ),
             const SizedBox(height: 12),
+            if (onRecoveryPressed != null) const SizedBox(height: 12),
             Row(
               children: [
                 SizedBox(
@@ -551,3 +653,37 @@ class _ExerciseCard extends StatelessWidget {
     return '$minutes:$padded';
   }
 }
+
+class _RecoveryBadge extends StatelessWidget {
+  const _RecoveryBadge({required this.endsAt});
+
+  final DateTime endsAt;
+
+  @override
+  Widget build(BuildContext context) {
+    final remaining = endsAt.difference(DateTime.now());
+    final safe = remaining.isNegative ? Duration.zero : remaining;
+    final minutes = safe.inMinutes;
+    final seconds = safe.inSeconds.remainder(60).toString().padLeft(2, '0');
+    final label = '${minutes.toString().padLeft(2, '0')}:$seconds';
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(999),
+        color: Theme.of(context).colorScheme.surfaceVariant.withOpacity(0.4),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Icon(Icons.timer_outlined, size: 16),
+          const SizedBox(width: 6),
+          Text(label),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
