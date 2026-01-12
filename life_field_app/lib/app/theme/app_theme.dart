@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 ThemeData buildAppTheme() {
-  const primaryGreen = Color(0xFF2ECC71);
+  const primaryGreen = Color.fromARGB(189, 24, 129, 75);
   final base = ThemeData(
     useMaterial3: true,
-    colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 25, 211, 118)).copyWith(
-      primary: const Color.fromARGB(255, 25, 211, 118),
-      secondary: const Color.fromARGB(255, 25, 211, 118),
+    colorScheme: ColorScheme.fromSeed(seedColor: primaryGreen).copyWith(
+      primary: primaryGreen,
+      secondary: primaryGreen,
     ),
   );
 
@@ -18,8 +18,8 @@ ThemeData buildAppTheme() {
       style: OutlinedButton.styleFrom(
         shape: const StadiumBorder(),
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 18),
-        side: const BorderSide(color: Color.fromARGB(255, 25, 211, 118)),
-        foregroundColor: const Color.fromARGB(255, 25, 211, 118),
+        side: const BorderSide(color: primaryGreen),
+        foregroundColor: primaryGreen,
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
